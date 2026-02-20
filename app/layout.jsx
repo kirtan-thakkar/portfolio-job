@@ -18,7 +18,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${outfit.className} antialiased`}
+        className={`${outfit.className} bg-neutral-100  dark:bg-neutral-800 antialiased`}
+
       >
         {children}
       </body>
