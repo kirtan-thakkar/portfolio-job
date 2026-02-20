@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="mt-4 min-h-screen tracking-tight">
-        <Container className="min-h-screen p-4">
+      <div className="min-h-screen tracking-tight">
+        <Container className="min-h-screen p-4 md:p-10">
           <h1 className="text-primary text-2xl font-medium tracking-tighter md:text-4xl">
             Hello
           </h1>
