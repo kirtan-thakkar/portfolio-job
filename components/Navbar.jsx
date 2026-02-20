@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Container from "./Container";
+import { motion } from "motion/react"
 
 const Navbar =()=>{
     const navItems =[
