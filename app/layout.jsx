@@ -5,7 +5,7 @@ import "./globals.css";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
-  weights: ["400", "500", "600", "700","800","900"],
+  weights: ["400"],
 })
 
 
@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${outfit.variable} antialiased`}
+        className={`${outfit.className} antialiased`}
       >
         {children}
       </body>
