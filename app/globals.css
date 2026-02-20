@@ -2,10 +2,12 @@
 
 @theme inline{
     --color-primary : var(--color-neutral-800);
+    --color-secondary : var(--color-neutral-600);
 }
 
 .dark{
     --color-primary: var(--color-neutral-100);
+    --color-secondary: var(--color-neutral-300);
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
