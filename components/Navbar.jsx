@@ -2,36 +2,55 @@
 
 import Link from "next/link";
 import Container from "./Container";
-import { motion } from "motion/react"
+import { AnimatePresence, motion } from "motion/react";
+import { useState } from "react";
 
-const Navbar =()=>{
-    const navItems =[
-        {
-            title:"About",
-            href:"/about"
-        },
-        {
-            title:"Projects",
-            href:"/projects"
-        },
-        {
-            title:"Contact",
-            href:"/contact"
-        }
-    ]
-    return (
-        <Container className="z-10 sticky inset-0 p-10">
-            <div className="flex items-center justify-between">
-                <Link href="/">Logo</Link>
-                <div className="flex items-center justify-center gap-10">
+const Navbar = () => {
+  const navItems = [
+    {
+      title: "About",
+      href: "/about",
+    },
+    {
+      title: "Projects",
+      href: "/projects",
+    },
+    {
+      title: "Contact",
+      href: "/contact",
+    },
+  ];
 
-                    {navItems.map((item,index)=>(
-                        <Link key={index} href={item.href}>{item.title}</Link>
-                    ))}
-
-                </div>
-            </div>
-        </Container>
-    )
-}
+  const [hovered, setHovered] = useState(null);
+  return (
+    <Container className="sticky inset-0 z-10 p-10">
+      <div className="flex items-center justify-between px-1 py-1">
+        <Link href="/">Logo</Link>
+        <div className="flex items-center justify-center gap-10">
+          {navItems.map((item, index) => (
+            <Link
+              className="relative px-1 py-1"
+              key={index}
+              href={item.href}
+              onMouseEnter={() => {
+                setHovered(index);
+              }}
+              onMouseLeave={() => {
+                setHovered(null);
+              }}
+            >
+              {hovered === index && (
+                <motion.span
+                  layoutId="hovered"
+                  className="absolute inset-0 h-full w-full rounded-md bg-neutral-100 dark:bg-neutral-800"
+                ></motion.span>
+              )}
+              <span className="relative z-50">{item.title}</span>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </Container>
+  );
+};
 export default Navbar;
