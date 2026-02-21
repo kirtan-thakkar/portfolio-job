@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Container from "./Container";
-import { LayoutGroup, motion } from "motion/react";
+import { LayoutGroup, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -21,9 +21,15 @@ const Navbar = () => {
   ];
 
   const [hovered, setHovered] = useState(null);
+  const {scrollY} = useScroll();
+
+  useMotionValueEvent(scrollY, "change",(latest)=>{
+    console.log("Page Scroll value : " , latest);
+  })
+
   return (
-    <Container className="sticky inset-0 z-10 p-10">
-      <div className="flex items-center justify-between px-1 py-1">
+    <Container className="sticky inset-0 z-10 p-4">
+      <motion.nav className="flex items-center justify-between px-1 py-1">
         <Link href="/">Logo</Link>
         <LayoutGroup>
           <div className="relative flex items-center justify-center gap-10">
@@ -41,6 +47,7 @@ const Navbar = () => {
               >
                 {hovered === index && (
                   <motion.span
+                  // LayoutID animation isn't working when the element is conditionally rendered!
                     layoutId="hovered-span"
                     className="absolute inset-0 h-full w-full rounded-md bg-neutral-100 dark:bg-neutral-800"
                   />
@@ -50,7 +57,7 @@ const Navbar = () => {
             ))}
           </div>  
         </LayoutGroup>
-      </div>
+      </motion.nav>
     </Container>
   );
 };
