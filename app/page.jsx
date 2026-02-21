@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <div className="min-h-[200vh] p-6 md:p-10 tracking-tight">
+      <div className="min-h-[200vh] p-10 md:p-10 mb:pt-20 tracking-tight">
         <Container className="min-h-screen p-4 md:p-10">
           <h1 className="text-primary text-2xl font-medium tracking-tighter md:text-4xl">
             Hello

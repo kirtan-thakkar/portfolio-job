@@ -31,7 +31,7 @@ const Navbar = () => {
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     console.log("Page Scroll value : ", latest);
-    if (latest > 20) {
+    if (latest > 10) {
       setScroled(true);
     } else {
       setScroled(false);
@@ -41,9 +41,16 @@ const Navbar = () => {
   return (
     <Container>
       <motion.nav
-        className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-4xl items-center justify-between p-4 px-6 backdrop-blur-sm transition-shadow duration-300"
-        style={{
+        className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-4xl items-center justify-between p-4 px-6 backdrop-blur-sm transition-shadow duration-100 ease-in-out"
+        animate={{
           boxShadow: scroled ? "var(--shadow-aceternity)" : "none",
+          width: scroled ? "50%" : "100%",
+          borderRadius: scroled ? "30px" : "0px",
+          y: scroled ? 10 : 0,
+        }}
+        transition={{
+          duration:0.2,
+          ease:"easeInOut"
         }}
       >
         <Link href="/">Logo</Link>
