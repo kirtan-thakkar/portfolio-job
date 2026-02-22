@@ -44,7 +44,7 @@ const Project = () => {
               initial={{
                 opacity:0,
                 filter:"blur(10px)",
-                y:50
+                y:25
               }}
               whileInView={{
                 opacity:1,
