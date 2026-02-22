@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Container from "./Container";
+import Link from "next/link";
 const Project = () => {
   const completedProject = [
     {
@@ -37,17 +38,28 @@ const Project = () => {
         <div className="grid grid-cols-1 gap-2 py-6 md:grid-cols-2 md:gap-4">
           {completedProject.map((project, index) => {
             return (
-              <div key={index}>
+              <div className="flex flex-col gap-1 md:gap-2" key={index}>
+                <Link
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Image
                     src={project.image}
                     alt={project.title}
                     width={500}
                     height={500}
-                    className=" border border-neutral-500 w-full h-full rounded-2xl object-cover "
+                    className="h-72 w-full rounded-2xl object-cover"
                   ></Image>
-                <h1 className="text-primary text-sm md:text-base">
-                  {project.title}
-                </h1>
+                </Link>
+                <div>
+                  <h1 className="text-primary text-sm md:text-base">
+                    {project.title}
+                  </h1>
+                  <p className="text-secondary text-xs md:text-sm">
+                    {project.description}
+                  </p>
+                </div>
               </div>
             );
           })}
