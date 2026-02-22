@@ -49,7 +49,7 @@ const Project = () => {
                     alt={project.title}
                     width={500}
                     height={500}
-                    className="h-72 w-full rounded-2xl object-cover"
+                    className="h-72 w-full rounded-lg object-cover"
                   ></Image>
                 </Link>
                 <div>
