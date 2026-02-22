@@ -56,7 +56,7 @@ const Project = () => {
                 ease:"easeInOut",
                 delay:index*0.1
               }}
-               className="flex flex-col gap-1 md:gap-2" key={index}>
+               className="group flex flex-col gap-1 md:gap-2" key={index}>
                 <Link
                   href={project.url}
                   target="_blank"
@@ -67,7 +67,7 @@ const Project = () => {
                     alt={project.title}
                     width={500}
                     height={500}
-                    className="h-72 w-full rounded-lg object-cover"
+                    className="h-72 w-full rounded-lg object-cover group-hover:blur-[5px] transition-all duration-200 ease-in-out"
                   ></Image>
                 </Link>
                 <div>
