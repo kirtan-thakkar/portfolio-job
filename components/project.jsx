@@ -1,6 +1,8 @@
+"use client"
 import Image from "next/image";
 import Container from "./Container";
 import Link from "next/link";
+import {motion} from "motion/react";
 const Project = () => {
   const completedProject = [
     {
@@ -38,7 +40,23 @@ const Project = () => {
         <div className="grid grid-cols-1 gap-2 py-6 md:grid-cols-2 md:gap-4">
           {completedProject.map((project, index) => {
             return (
-              <div className="flex flex-col gap-1 md:gap-2" key={index}>
+              <motion.div
+              initial={{
+                opacity:0,
+                filter:"blur(10px)",
+                y:50
+              }}
+              whileInView={{
+                opacity:1,
+                filter:"blur(0px)",
+                y:0
+              }}
+              transition={{
+                duration:0.3,
+                ease:"easeInOut",
+                delay:index*0.1
+              }}
+               className="flex flex-col gap-1 md:gap-2" key={index}>
                 <Link
                   href={project.url}
                   target="_blank"
@@ -60,7 +78,7 @@ const Project = () => {
                     {project.description}
                   </p>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
