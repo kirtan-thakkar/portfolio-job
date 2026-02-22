@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import Project from "@/components/project";
 import Image from "next/image";
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
             credibility. I craft web apps with Nextjs mongodb framer motion, and
             Gsap
           </p>
+          <Project />
         </Container>
       </div>
     </>
