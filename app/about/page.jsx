@@ -1,3 +1,4 @@
+import { Collage } from "@/components/collage";
 import Container from "@/components/Container";
 import Image from "next/image";
 export default function AboutPage() {
@@ -15,6 +16,7 @@ export default function AboutPage() {
             credibility. I craft web apps with Nextjs mongodb framer motion, and
             Gsap
           </p>
+          <Collage />
         </Container>
       </div>
     </>
