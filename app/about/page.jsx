@@ -16,6 +16,10 @@ export default function AboutPage() {
             credibility. I craft web apps with Nextjs mongodb framer motion, and
             Gsap
           </p>
+          <p className="mt-6 text-secondary max-w-lg pt-4 text-sm md:text-base">
+            I love to travel.
+          </p>
+
           <Collage />
         </Container>
       </div>
