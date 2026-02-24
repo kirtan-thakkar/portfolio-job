@@ -39,7 +39,11 @@ const data = [
               whileInView={{ opacity: 1, y: 0 ,filter: "blur(0px)"}}
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="text-primary">{item.title}</motion.h2>
-              <p className="text-secondary text-sm pl-4">{item.description}</p>
+              <motion.p
+               initial={{ opacity: 0, y: 5, }}
+               whileInView={{ opacity: 1, y: 0 }}
+               transition={{ duration: 0.2, delay: index * 0.1 }}
+               className="text-secondary text-sm pl-4">{item.description}</motion.p>
             </div>
           );
         })}
