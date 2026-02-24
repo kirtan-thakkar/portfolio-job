@@ -57,7 +57,7 @@ export function Collage() {
           <img
             src={item.image}
             alt={item.title}
-            className="pointer-events-none relative z-10 h-60 w-80 object-cover" />
+            className="pointer-events-none relative z-10 h-50 w-80 object-cover" />
           <h3
             className="mt-4 text-center text-base font-bold text-neutral-700 dark:text-neutral-300">
             {item.title}
