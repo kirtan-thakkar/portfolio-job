@@ -1,5 +1,6 @@
 "use client";
 import {motion} from "motion/react";
+import { IconSquareRoundedCheckFilled } from "@tabler/icons-react";
 export default function TimeLine() {
 const data = [
     {
@@ -33,12 +34,13 @@ const data = [
       <div className="py-10">
         {data.map((item, index) => {
           return (
-            <div key={index} className="">
+            <div key={index} className="mb-4 ">
               <motion.h2
               initial={{ opacity: 0, y: 5,filter: "blur(10px)" }}
               whileInView={{ opacity: 1, y: 0 ,filter: "blur(0px)"}}
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="text-primary">{item.title}</motion.h2>
+              
               <motion.p
                initial={{ opacity: 0, y: -10, }}
                whileInView={{ opacity: 1, y: 0 }}
@@ -50,4 +52,13 @@ const data = [
       </div>
     </>
   );
+}
+
+const step = ({Children,className})=>{
+    return(
+        <div className={`${className}`}>
+            {Children}
+            <IconSquareRoundedCheckFilled className="w-4 h-4 mt-0.5 text-neutral-500"/>
+        </div>
+    )
 }
