@@ -1,7 +1,6 @@
 import { Collage } from "@/components/collage";
 import Container from "@/components/Container";
 import TimeLine from "@/components/Timeline";
-import Image from "next/image";
 export default function AboutPage() {
   return (
     <>
@@ -21,7 +20,7 @@ export default function AboutPage() {
             I love to travel.
           </p>
           <Collage />
-          <p className="mt-6 text-secondary max-w-lg pt-4 text-sm md:text-base">
+          <p className="mt-6  text-secondary max-w-lg pt-4 text-sm md:text-base">
              Here's a timeline of my jouney as a web developer.
           </p>
           <TimeLine />

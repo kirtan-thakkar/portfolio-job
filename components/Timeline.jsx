@@ -1,4 +1,5 @@
-import Container from "@/components/Container";
+"use client";
+import {motion} from "motion/react";
 export default function TimeLine() {
 const data = [
     {
@@ -29,12 +30,16 @@ const data = [
 ];
   return (
     <>
-      <div>
+      <div className="py-10">
         {data.map((item, index) => {
           return (
-            <div key={index}>
-              <p className="text-secondary text-base">{item.title}</p>
-              <p className="text-secondary text-sm">{item.description}</p>
+            <div key={index} className="">
+              <motion.h2
+              initial={{ opacity: 0, y: 5,filter: "blur(10px)" }}
+              whileInView={{ opacity: 1, y: 0 ,filter: "blur(0px)"}}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              className="text-primary">{item.title}</motion.h2>
+              <p className="text-secondary text-sm pl-4">{item.description}</p>
             </div>
           );
         })}
