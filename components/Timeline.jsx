@@ -71,7 +71,7 @@ const Step = ({ Children, className }) => {
   return (
     <div className={`${className}`}>
       {Children}
-      <IconSquareRoundedCheckFilled className="mt-0.5 h-4 w-4 text-neutral-500" />
+      <IconSquareRoundedCheckFilled className="mt-0.5 h-4 w-4 text-neutral-600" />
     </div>
   );
 };
