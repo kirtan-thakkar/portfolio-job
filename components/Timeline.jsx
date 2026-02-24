@@ -40,12 +40,14 @@ const data = [
               whileInView={{ opacity: 1, y: 0 ,filter: "blur(0px)"}}
               transition={{ duration: 0.3, delay: index * 0.1 }}
               className="text-primary">{item.title}</motion.h2>
-              
+              <div className="flex">
+                <Step></Step>
               <motion.p
                initial={{ opacity: 0, y: -10, }}
                whileInView={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.2, delay: index * 0.1 }}
-               className="text-secondary text-sm pl-4">{item.description}</motion.p>
+               className="text-secondary text-sm pl-2">{item.description}</motion.p>
+                </div>
             </div>
           );
         })}
@@ -54,7 +56,7 @@ const data = [
   );
 }
 
-const step = ({Children,className})=>{
+const Step = ({Children,className})=>{
     return(
         <div className={`${className}`}>
             {Children}
