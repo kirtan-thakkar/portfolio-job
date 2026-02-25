@@ -5,8 +5,7 @@ export default function TimeLine() {
   const data = [
     {
       title: "2024",
-      description:
-        "Started learning web development from Apna Collage and created my first web app using HTML, CSS and JavaScript",
+      description:"Started learning programming and built my first website using HTML, CSS, and JavaScript",
     },
     {
       title: "2025",
@@ -39,7 +38,7 @@ export default function TimeLine() {
                 initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="text-primary"
+                className="text-primary shadow-aceternity w-fit rounded-md px-4 py-1  "
               >
                 {item.title}
               </motion.h2>
