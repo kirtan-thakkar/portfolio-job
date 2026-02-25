@@ -8,7 +8,11 @@ export default function AboutPage() {
     <>
       <div className="min-h-[200vh] p-10 md:p-10 mb:pt-20 tracking-tight">
         <Container className="min-h-screen p-4 md:p-10">
-          <motion.h1 className="text-primary text-2xl font-medium tracking-tighter md:text-4xl">
+          <motion.h1
+            initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
+            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)",delay:0.1 }}
+            transition={{ duration: 0.2 }}
+            className="text-primary text-2xl font-medium tracking-tighter md:text-4xl">
             About Me
           </motion.h1>
           <p className="text-secondary max-w-lg pt-4 text-sm md:text-base">
