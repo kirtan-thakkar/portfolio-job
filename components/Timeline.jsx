@@ -4,18 +4,9 @@ import { IconSquareRoundedCheckFilled } from "@tabler/icons-react";
 export default function TimeLine() {
   const data = [
     {
-      title: "2024",
-      description:"Started learning programming and built my first website using HTML, CSS, and JavaScript",
-    },
-    {
       title: "2025",
       description:
-        "Started learning React and Nextjs and created my first full stack web app using Nextjs and MongoDB",
-    },
-    {
-      title: "2025",
-      description:
-        "Built a real-time chat application using Socket.io and deployed it on Vercel",
+        "Developed a task management app with authentication and cloud synchronization",
     },
     {
       title: "2025",
@@ -25,7 +16,16 @@ export default function TimeLine() {
     {
       title: "2025",
       description:
-        "Developed a task management app with authentication and cloud synchronization",
+        "Built a real-time chat application using Socket.io and deployed it on Vercel",
+    },
+    {
+      title: "2025",
+      description:
+        "Started learning React and Nextjs and created my first full stack web app using Nextjs and MongoDB",
+    },
+    {
+      title: "2024",
+      description:"Started learning programming and built my first website using HTML, CSS, and JavaScript",
     },
   ];
   return (
@@ -38,7 +38,7 @@ export default function TimeLine() {
                 initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="text-primary shadow-aceternity w-fit rounded-md px-4 py-0.5  "
+                className="text-primary shadow-aceternity w-fit rounded-md px-4 py-0.5 mb-2  "
               >
                 {item.title}
               </motion.h2>
