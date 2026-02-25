@@ -9,7 +9,7 @@ export default function Home() {
         <Container className="min-h-screen p-4 md:p-10">
           <motion.h1
             initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)",delay:0.1 }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)",delay:0.1 }}
             transition={{ duration: 0.1 }}
             className="text-primary text-2xl font-medium tracking-tighter md:text-4xl"
           >
@@ -17,7 +17,7 @@ export default function Home() {
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
-            whileInView={{ opacity: 1, y: 0, filter: "blur(0px)",delay:0.2 }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)",delay:0.2 }}
             transition={{ duration: 0.3 }}
           className="text-secondary max-w-lg pt-4 text-sm md:text-base">
             I am a second year comp-sci student. I am a hardworking and
