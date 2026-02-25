@@ -2,6 +2,7 @@ import { Outfit } from "@next/font/google";
 import localFont from "@next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { ViewTransitions } from "next-view-transitions";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -16,14 +17,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${outfit.className} bg-neutral-100 antialiased dark:bg-neutral-800`}
-      >
-        <Navbar />
+    <ViewTransitions>
+      <html lang="en">
+        <body
+          className={`${outfit.className} bg-neutral-100 antialiased dark:bg-neutral-800`}
+        >
+          <Navbar />
 
-        {children}
-      </body>
-    </html>
+          {children}
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
