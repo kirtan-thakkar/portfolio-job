@@ -1,5 +1,6 @@
 "use client";
 import Container from "@/components/Container";
+import Footer from "@/components/footer";
 import Project from "@/components/project";
 import { motion } from "motion/react";
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
           <Project />
         </Container>
       </div>
+      <Footer />
     </>
   );
 }
