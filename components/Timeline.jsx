@@ -25,7 +25,8 @@ export default function TimeLine() {
     },
     {
       title: "2024",
-      description:"Started learning programming and built my first website using HTML, CSS, and JavaScript",
+      description:
+        "Started learning programming and built my first website using HTML, CSS, and JavaScript",
     },
   ];
   return (
@@ -38,7 +39,7 @@ export default function TimeLine() {
                 initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
                 whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                 transition={{ duration: 0.3, delay: index * 0.1 }}
-                className="text-primary shadow-aceternity  w-fit rounded-md px-4 py-0.5 mb-2  "
+                className="text-primary shadow-aceternity mb-2 w-fit rounded-md px-4 py-0.5"
               >
                 {item.title}
               </motion.h2>
