@@ -3,6 +3,7 @@ import { Github } from "lucide-react";
 import { Linkedin } from "lucide-react";
 import { Twitter } from "lucide-react";
 import Link from "next/link";
+import {motion} from "motion/react";
 const Footer = () => {
   const icons = [
     {
@@ -22,7 +23,7 @@ const Footer = () => {
     },
   ];
   return (
-    <div className="mx-auto flex max-w-4xl items-center justify-between bg-white dark:bg-black">
+    <motion.div className="mx-auto flex max-w-4xl items-center justify-between bg-white dark:bg-black">
       <div className="flex items-center">
         <h1 className="text-secondary">Made with ❤️ by kirtan</h1>
       </div>
@@ -42,7 +43,7 @@ const Footer = () => {
           );
         })}
       </div>
-    </div>
+    </motion.div>
   );
 };
 export default Footer;
