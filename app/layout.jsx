@@ -1,5 +1,5 @@
 import { Outfit } from "@next/font/google";
-import localFont from "@next/font/local";
+import Footer from "@/components/Footer";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ViewTransitions } from "next-view-transitions";

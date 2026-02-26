@@ -1,6 +1,6 @@
 "use client";
 import Container from "@/components/Container";
-import Footer from "@/components/footer";
+import Footer from "@/components/Footer";
 import Project from "@/components/project";
 import { motion } from "motion/react";
 export default function Home() {
@@ -28,9 +28,10 @@ export default function Home() {
             Gsap
           </motion.p>
           <Project />
+          <Footer />
         </Container>
       </div>
-      <Footer />
+      
     </>
   );
 }
