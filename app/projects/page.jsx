@@ -1,4 +1,4 @@
-
+import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 export default function ProjectPage() {
   return (
@@ -11,6 +11,7 @@ export default function ProjectPage() {
           <p className="mt-6 text-secondary max-w-lg pt-4 text-sm md:text-base">
             I love to travel.
           </p>
+          <Footer />
         </Container>
       </div>
     </>

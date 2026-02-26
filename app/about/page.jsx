@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import { Collage } from "@/components/collage";
 import Container from "@/components/Container";
 import TimeLine from "@/components/Timeline";
+import Footer from "@/components/Footer";
 export default function AboutPage() {
   return (
     <>
@@ -36,6 +37,7 @@ export default function AboutPage() {
             Here's a timeline of my jouney as a web developer.
           </p>
           <TimeLine />
+          <Footer />
         </Container>
       </div>
     </>
