@@ -23,7 +23,23 @@ const Footer = () => {
     },
   ];
   return (
-    <motion.div className="mx-auto flex max-w-4xl items-center justify-between bg-white dark:bg-black">
+    <motion.div
+    initial={{
+      opacity:0.9,
+      y:-5,
+      filter:"blur(10px)"
+    }}
+    whileInView={{
+      opacity:1,
+      y:0,
+      filter:"blur(0px)"
+    }}
+    transition={{
+      duration:0.5,
+      ease:"easeInOut",
+      dealy:0.2
+    }}
+     className="mx-auto flex max-w-4xl items-center justify-between bg-white dark:bg-black">
       <div className="flex items-center">
         <h1 className="text-secondary">Made with ❤️ by kirtan</h1>
       </div>
