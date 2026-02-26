@@ -41,7 +41,8 @@ const Footer = () => {
     }}
      className="mx-auto flex max-w-4xl items-center justify-between bg-white dark:bg-black">
       <div className="flex items-center">
-        <h1 className="text-secondary">Made with ❤️ by kirtan</h1>
+        <Link href="https://www.instagram.com/kirtan.p.v.t/?hl=en" target="_blank" rel="noopener noreferrer">
+        <h1 className="text-secondary hover:text-primary transition-colors duration-100 ease-in cursor-pointer">Made with ❤️ by kirtan</h1></Link>
       </div>
       <div className="flex items-center gap-4 text-neutral-500">
         {icons.map((icon) => {
@@ -53,6 +54,7 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={icon.alt}
+              className="hover:text-primary transition-colors duration-100"
             >
               <Icon size={20} />
             </Link>
