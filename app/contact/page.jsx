@@ -15,6 +15,18 @@ export default function AboutPage() {
           >
             Contact Me
           </motion.h1>
+          <motion.p className="text-secondary max-w-lg pt-4 text-sm md:text-base">
+            I am open for freelancing offers and full-time job opportunities. If
+            you have any questions or want to work together, feel free to reach
+            out to me via email at{" "}
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=connect.with.kirtan@gmail.com"
+              target="_blank"
+              className="text-secondary max-w-lg pt-4 text-sm md:text-base"
+            >
+              Open Gmail
+            </a>
+          </motion.p>
           <Footer />
         </Container>
       </div>
