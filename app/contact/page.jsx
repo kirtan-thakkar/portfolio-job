@@ -2,6 +2,7 @@
 import { motion } from "motion/react";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
+import Link from "next/link";
 export default function AboutPage() {
   return (
     <>
@@ -19,13 +20,14 @@ export default function AboutPage() {
             I am open for freelancing offers and full-time job opportunities. If
             you have any questions or want to work together, feel free to reach
             out to me via email at{" "}
-            <a
+            <Link
               href="https://mail.google.com/mail/?view=cm&fs=1&to=connect.with.kirtan@gmail.com"
               target="_blank"
-              className="text-secondary max-w-lg pt-4 text-sm md:text-base"
+              className="text-primary max-w-lg pt-4 text-sm md:text-base underline "
             >
-              Open Gmail
-            </a>
+              connect.with.kirtan@gmail.com
+              
+            </Link>
           </motion.p>
           <Footer />
         </Container>
