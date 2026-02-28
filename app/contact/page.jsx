@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import ContactForm from "@/components/ContactForm";
 export default function AboutPage() {
   return (
     <>
@@ -23,12 +24,12 @@ export default function AboutPage() {
             <Link
               href="https://mail.google.com/mail/?view=cm&fs=1&to=connect.with.kirtan@gmail.com"
               target="_blank"
-              className="text-primary max-w-lg pt-4 text-sm md:text-base underline "
+              className="text-primary max-w-lg py-10 pt-4 text-sm underline md:text-base"
             >
               connect.with.kirtan@gmail.com
-              
             </Link>
           </motion.p>
+          <ContactForm />
           <Footer />
         </Container>
       </div>
