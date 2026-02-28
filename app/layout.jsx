@@ -2,6 +2,7 @@ import { Outfit } from "@next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { ViewTransitions } from "next-view-transitions";
+import { Toaster } from "sonner";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -17,6 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ViewTransitions>
+      <Toaster />
       <html lang="en">
         <body
           className={`${outfit.className} bg-neutral-100 antialiased dark:bg-neutral-800`}
