@@ -17,7 +17,7 @@ const ContactForm = () => {
   return (
     <div className="py-10">
       <form onSubmit={handleSubmit}>
-        <div className="mx-auto flex w-full max-w-2xl flex-col gap-2">
+        <div className="mx-auto flex w-full max-w-lg flex-col gap-2">
           <label
             htmlFor="name"
             className="text-primary text-base tracking-tight"
@@ -29,7 +29,7 @@ const ContactForm = () => {
             name="name"
             type="text"
             placeholder="Enter your name"
-            className="shadow-aceternity max-w-sm rounded-lg p-2"
+            className="shadow-aceternity rounded-lg p-2"
             onChange={handleChange}
           ></input>
           <label
@@ -43,7 +43,7 @@ const ContactForm = () => {
             name="email"
             type="email"
             placeholder="Enter your email"
-            className="shadow-aceternity max-w-sm rounded-lg p-2"
+            className="shadow-aceternity rounded-lg p-2"
             onChange={handleChange}
           ></input>
           <label
@@ -57,10 +57,10 @@ const ContactForm = () => {
             name="message"
             type="text"
             placeholder="Enter your message"
-            className="shadow-aceternity max-w-sm rounded-lg p-2"
+            className="shadow-aceternity rounded-lg p-2"
             onChange={handleChange}
           ></input>
-          <button className="max-w-sm cursor-pointer rounded-md bg-blue-500 px-4 py-1 text-white">
+          <button className="mt-2  cursor-pointer rounded-md bg-blue-500 px-4 py-1 text-white">
             Submit
           </button>
         </div>
