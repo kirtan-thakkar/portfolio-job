@@ -9,9 +9,11 @@ const ContactForm = () => {
       toast.error("Please fill in all the fields.");
       return;
     } else {
-      toast.success(
-        `Thank you ${name} for reaching out! I will get back to you at ${email} soon.`,
-      );
+      setTimeout(() => {
+        toast.success(
+          `Thank you ${name} for reaching out! I will get back to you at ${email} soon.`,
+        );
+      }, 1000);
     }
 
     console.log("Form Submitted");
