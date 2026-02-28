@@ -4,6 +4,16 @@ import { toast } from "sonner";
 const ContactForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
+    const { name, email, message } = formData;
+    if (!name || !email || !message) {
+      toast.error("Please fill in all the fields.");
+      return;
+    } else {
+      toast.success(
+        `Thank you ${name} for reaching out! I will get back to you at ${email} soon.`,
+      );
+    }
+
     console.log("Form Submitted");
   };
   const [formData, setFormData] = useState({
@@ -44,7 +54,7 @@ const ContactForm = () => {
             name="email"
             type="email"
             placeholder="connect.with.kirtan@gmail.com"
-            className="shadow-aceternity rounded-lg p-2 focus:outline-none focus:ring-primary focus:ring-1"
+            className="shadow-aceternity focus:ring-primary rounded-lg p-2 focus:ring-1 focus:outline-none"
             onChange={handleChange}
           ></input>
           <label
@@ -60,10 +70,10 @@ const ContactForm = () => {
             name="message"
             type="text"
             placeholder="I am interested in working with you."
-            className="shadow-aceternity rounded-lg p-2 focus:outline-none focus:ring-primary focus:ring-1 resize-none"
+            className="shadow-aceternity focus:ring-primary resize-none rounded-lg p-2 focus:ring-1 focus:outline-none"
             onChange={handleChange}
           ></textarea>
-          <button className="mt-2 cursor-pointer rounded-md bg-blue-500 px-4 py-1 text-white" onClick={()=> toast("Firsst mother fuckingtoasst")}>
+          <button className="mt-2 cursor-pointer rounded-md bg-blue-500 px-4 py-1 text-white">
             Submit
           </button>
         </div>
