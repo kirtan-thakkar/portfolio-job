@@ -42,7 +42,7 @@ const ContactForm = () => {
             id="email"
             name="email"
             type="email"
-            placeholder="Enter your email"
+            placeholder="connect.with.kirtan@gmail.com"
             className="shadow-aceternity rounded-lg p-2"
             onChange={handleChange}
           ></input>
@@ -52,14 +52,16 @@ const ContactForm = () => {
           >
             Message
           </label>
-          <input
+          <textarea
+          rows={2}
+          cols={5}
             id="message"
             name="message"
             type="text"
-            placeholder="Enter your message"
+            placeholder="I am interested in working with you."
             className="shadow-aceternity rounded-lg p-2"
             onChange={handleChange}
-          ></input>
+          ></textarea>
           <button className="mt-2  cursor-pointer rounded-md bg-blue-500 px-4 py-1 text-white">
             Submit
           </button>
