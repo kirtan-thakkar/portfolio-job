@@ -29,7 +29,7 @@ const ContactForm = () => {
             name="name"
             type="text"
             placeholder="Enter your name"
-            className="shadow-aceternity rounded-lg p-2"
+            className="shadow-aceternity focus:ring-primary rounded-lg p-2 focus:ring-1 focus:outline-none"
             onChange={handleChange}
           ></input>
           <label
@@ -43,7 +43,7 @@ const ContactForm = () => {
             name="email"
             type="email"
             placeholder="connect.with.kirtan@gmail.com"
-            className="shadow-aceternity rounded-lg p-2"
+            className="shadow-aceternity rounded-lg p-2 focus:outline-none focus:ring-primary focus:ring-1"
             onChange={handleChange}
           ></input>
           <label
@@ -53,16 +53,16 @@ const ContactForm = () => {
             Message
           </label>
           <textarea
-          rows={2}
-          cols={5}
+            rows={2}
+            cols={5}
             id="message"
             name="message"
             type="text"
             placeholder="I am interested in working with you."
-            className="shadow-aceternity rounded-lg p-2"
+            className="shadow-aceternity rounded-lg p-2 focus:outline-none focus:ring-primary focus:ring-1"
             onChange={handleChange}
           ></textarea>
-          <button className="mt-2  cursor-pointer rounded-md bg-blue-500 px-4 py-1 text-white">
+          <button className="mt-2 cursor-pointer rounded-md bg-blue-500 px-4 py-1 text-white">
             Submit
           </button>
         </div>
