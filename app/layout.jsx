@@ -18,7 +18,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ViewTransitions>
-      <Toaster />
+      <Toaster position="top-center"/>
       <html lang="en">
         <body
           className={`${outfit.className} bg-neutral-100 antialiased dark:bg-neutral-800`}
