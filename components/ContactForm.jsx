@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { toast } from "sonner";
 const ContactForm = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -62,7 +63,7 @@ const ContactForm = () => {
             className="shadow-aceternity rounded-lg p-2 focus:outline-none focus:ring-primary focus:ring-1 resize-none"
             onChange={handleChange}
           ></textarea>
-          <button className="mt-2 cursor-pointer rounded-md bg-blue-500 px-4 py-1 text-white">
+          <button className="mt-2 cursor-pointer rounded-md bg-blue-500 px-4 py-1 text-white" onClick={()=> toast("Firsst mother fuckingtoasst")}>
             Submit
           </button>
         </div>
