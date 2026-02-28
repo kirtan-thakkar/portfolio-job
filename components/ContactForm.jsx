@@ -59,7 +59,7 @@ const ContactForm = () => {
             name="message"
             type="text"
             placeholder="I am interested in working with you."
-            className="shadow-aceternity rounded-lg p-2 focus:outline-none focus:ring-primary focus:ring-1"
+            className="shadow-aceternity rounded-lg p-2 focus:outline-none focus:ring-primary focus:ring-1 resize-none"
             onChange={handleChange}
           ></textarea>
           <button className="mt-2 cursor-pointer rounded-md bg-blue-500 px-4 py-1 text-white">
