@@ -3,6 +3,7 @@ import {motion} from "motion/react";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 import Project from "@/components/project";
+import Testimonial from "@/components/testimonial";
 export default function ProjectPage() {
   return (
     <>
@@ -25,6 +26,7 @@ export default function ProjectPage() {
            user-centeric applications that make a difference.
           </motion.p>
           <Project />
+          <Testimonial />
           <Footer />
         </Container>
       </div>
