@@ -7,13 +7,13 @@ import ContactForm from "@/components/ContactForm";
 export default function AboutPage() {
   return (
     <>
-      <div className="mb:pt-20 min-h-[200vh] p-10 tracking-tight md:p-10 ">
-        <Container className="min-h-screen p-4 md:p-10">
+      <div className="mb:pt-20 min-h-screen p-10 tracking-tight md:p-10  ">
+        <Container className="min-h-screen p-4 md:p-10 ">
           <motion.h1
             initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)", delay: 0.2 }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)", delay: 0.2 , }}
             transition={{ duration: 0.2 }}
-            className="text-primary text-2xl font-medium tracking-tighter md:text-4xl"
+            className="text-primary text-2xl font-medium tracking-tighter text-shadow-2xs  md:text-4xl"
           >
             Contact Me
           </motion.h1>
@@ -29,7 +29,7 @@ export default function AboutPage() {
               connect.with.kirtan@gmail.com
             </Link>
           </motion.p>
-          <ContactForm className="pb-60" />
+          <ContactForm className="pb-60 mt-8" />
           <Footer />
         </Container>
       </div>
