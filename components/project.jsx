@@ -37,7 +37,7 @@ const Project = () => {
         <p className="text-secondary max-w-lg pt-4 text-sm md:text-base">
           Some of my Beautifully Crafted Projects
         </p>
-        <div className="grid grid-cols-1 gap-2 py-6 md:grid-cols-3 md:gap-4">
+        <div className="grid grid-cols-1 gap-2 py-6 md:grid-cols-3 md:gap-6">
           {completedProject.slice(0,3).map((project, index) => {
             return (
               <motion.div
@@ -70,7 +70,7 @@ const Project = () => {
                     alt={project.title}
                     width={500}
                     height={500}
-                    className="h-72 w-full rounded-lg object-cover transition-all duration-200 ease-in-out group-hover:blur-[5px]"
+                    className="h-60 w-full rounded-lg object-cover transition-all duration-200 ease-in-out group-hover:blur-[5px]"
                   ></Image>
                 </Link>
                 <div>
