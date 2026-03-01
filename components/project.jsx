@@ -37,8 +37,8 @@ const Project = () => {
         <p className="text-secondary max-w-lg pt-4 text-sm md:text-base">
           Some of my Beautifully Crafted Projects
         </p>
-        <div className="grid grid-cols-1 gap-2 py-6 md:grid-cols-2 md:gap-4">
-          {completedProject.map((project, index) => {
+        <div className="grid grid-cols-1 gap-2 py-6 md:grid-cols-3 md:gap-4">
+          {completedProject.slice(0,3).map((project, index) => {
             return (
               <motion.div
                 initial={{
