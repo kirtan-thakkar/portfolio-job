@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { toast } from "sonner";
-const ContactForm = () => {
+const ContactForm = ({className}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const { name, email, message } = formData;
@@ -28,7 +28,7 @@ const ContactForm = () => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
   return (
-    <div className="py-10">
+    <div className={`py-10 ${className}`}>
       <form onSubmit={handleSubmit}>
         <div className="mx-auto flex w-full max-w-lg flex-col gap-2">
           <label
