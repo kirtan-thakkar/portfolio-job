@@ -2,6 +2,7 @@
 import {motion} from "motion/react";
 import Footer from "@/components/Footer";
 import Container from "@/components/Container";
+import Project from "@/components/project";
 export default function ProjectPage() {
   return (
     <>
@@ -23,7 +24,7 @@ export default function ProjectPage() {
            I'm a passionate software engineer dediccated to crafting elegant solutions for complex problems. With expertise in full-stack development, I enjoy building 
            user-centeric applications that make a difference.
           </motion.p>
-          
+          <Project />
           <Footer />
         </Container>
       </div>
