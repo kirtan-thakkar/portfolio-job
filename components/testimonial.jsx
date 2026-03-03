@@ -14,7 +14,7 @@ const Testimonial = () => {
     },
     {
       qoute:
-        "Working with Kirtan was a game-changer for our business. The e-commerce platform he built exceeded our expectations and sales have increased by 40%.",
+        "Working with Kirtan was a game-changer for our business. He exceeded our expectations and sales have increased by 40%.",
       name: "Sarah Mitchell",
       avatar:
         "https://plus.unsplash.com/premium_photo-1664203067979-47448934fd97?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGZhY2V8ZW58MHx8MHx8fDA%3D",
@@ -28,14 +28,14 @@ const Testimonial = () => {
     },
     {
       qoute:
-        "Kirtan's expertise in web development is outstanding. He transformed our outdated website into a modern, responsive platform that our customers love.",
+        "Kirtan's expertise is outstanding. He transformed our outdated website into a modern, responsive platform that our customers love.",
       name: "Emily Rodriguez",
       avatar:
         "https://images.unsplash.com/photo-1618835962148-cf177563c6c0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjh8fGZhY2V8ZW58MHx8MHx8fDA%3D",
     },
     {
       qoute:
-        "Professional, reliable, and incredibly talented. Kirtan built our SaaS platform from scratch and it's been running smoothly with zero downtime.",
+        "Professional, reliable, and incredibly talented. Kirtan built our SaaS platform from scratch and it's been running smoothly and efficiently ever since.",
       name: "James Anderson",
       avatar:
         "https://images.unsplash.com/photo-1595956553066-fe24a8c33395?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGZhY2V8ZW58MHx8MHx8fDA%3D",
@@ -61,7 +61,7 @@ const Testimonial = () => {
             ease: "easeInOut",
           }}
         >
-          <Marquee speed={100} className="my-4">
+          <Marquee speed={100} pauseOnHover={true} className="my-4">
             {testimonials.map((item, index) => (
               <div
                 key={index}
@@ -86,13 +86,13 @@ const Testimonial = () => {
                   <p className="text-secondary text-center italic">
                     {item.qoute}
                   </p>
-                  <div className="flex flex-row items-center justify-between gap-16">
+                  <div className="flex flex-row items-center py-4 justify-baseline gap-4">
                     <img
                       src={item.avatar}
                       alt={item.name}
-                      className="size-10 rounded-full"
+                      className="size-10 rounded-full opacity-90"
                     />
-                    <p>{item.name}</p>
+                    <p className="text-primary">{item.name}</p>
                   </div>
                 </motion.div>
               </div>
