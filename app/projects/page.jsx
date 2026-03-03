@@ -7,7 +7,7 @@ import Testimonial from "@/components/testimonial";
 export default function ProjectPage() {
   return (
     <>
-      <div className="min-h-[200vh] p-10 md:p-10 mb:pt-20 tracking-tight">
+      <div className="min-h-screen p-10 md:p-10 mb:pt-20 tracking-tight">
         <Container className=" p-4 md:p-10">
           <motion.h1
             initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}

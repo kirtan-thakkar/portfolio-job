@@ -43,7 +43,7 @@ const Testimonial = () => {
   ];
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
-    <div className="py-10">
+    <div className="py-10 ">
       <Container>
         <motion.div
           initial={{
