@@ -46,6 +46,7 @@ const Testimonial = () => {
     <div className="py-10 ">
       <Container>
         <motion.div
+        className="mask-l-from-80% mask-r-from-80% "
           initial={{
             opacity: 0.5,
             filter: "blur(10px)",
@@ -65,7 +66,7 @@ const Testimonial = () => {
             {testimonials.map((item, index) => (
               <div
                 key={index}
-                className="mx-3 flex shrink-0 items-center justify-center"
+                className="mx-3 flex shrink-0 items-center justify-center "
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
