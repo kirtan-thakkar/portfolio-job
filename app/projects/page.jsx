@@ -5,10 +5,11 @@ import Container from "@/components/Container";
 import Project from "@/components/project";
 import Testimonial from "@/components/testimonial";
 import { Scales } from "@/components/scales";
+import { ReactLenis } from "lenis/react";
 export default function ProjectPage() {
   return (
     <>
-      <div className="min-h-screen p-12 md:p-10 mb:pt-20 tracking-tight relative">
+      <ReactLenis root className="min-h-screen p-12 md:p-10 mb:pt-20 tracking-tight relative">
         <Container className=" p-4 md:p-10">
           <Scales />
           <motion.h1
@@ -31,7 +32,7 @@ export default function ProjectPage() {
           <Testimonial />
           <Footer />
         </Container>
-      </div>
+      </ReactLenis>
     </>
   );
 }

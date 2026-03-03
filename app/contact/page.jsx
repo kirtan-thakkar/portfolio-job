@@ -5,10 +5,11 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import { Scales } from "@/components/scales";
+import { ReactLenis } from "lenis/react";
 export default function AboutPage() {
   return (
     <>
-      <div className="mb:pt-20 min-h-screen p-10 tracking-tight md:p-10  ">
+      <ReactLenis root className="mb:pt-20 min-h-screen p-10 tracking-tight md:p-10 relative">
         <Container className="min-h-screen p-4 md:p-10 ">
           <Scales />
           <motion.h1
@@ -34,7 +35,7 @@ export default function AboutPage() {
           <ContactForm className="pb-60 mt-8" />
           <Footer />
         </Container>
-      </div>
+      </ReactLenis>
     </>
   );
 }

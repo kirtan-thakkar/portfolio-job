@@ -4,10 +4,11 @@ import Footer from "@/components/Footer";
 import Project from "@/components/project";
 import { Scales } from "@/components/scales";
 import { motion } from "motion/react";
+import {ReactLenis} from "lenis/react";
 export default function Home() {
   return (
     <>
-      <div className="mb:pt-20 min-h-screen p-10 tracking-tight md:p-10 relative">
+      <ReactLenis root className="mb:pt-20 min-h-screen p-10 tracking-tight md:p-10 relative">
         
         <Container className="min-h-screen p-4 md:p-10">
           <Scales />
@@ -33,7 +34,7 @@ export default function Home() {
           <Project />
           <Footer />
         </Container>
-      </div>
+      </ReactLenis>
       
     </>
   );
