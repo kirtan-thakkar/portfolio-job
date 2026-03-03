@@ -62,15 +62,18 @@ const Testimonial = () => {
             ease: "easeInOut",
           }}
         >
-          <Marquee speed={100} pauseOnHover={true} className="my-4">
+          <Marquee speed={100} pauseOnHover={true} >
             {testimonials.map((item, index) => (
               <div
                 key={index}
-                className="mx-3 flex shrink-0 items-center justify-center "
+                className="mx-3 flex flex-col shrink-0 items-center justify-center "
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
                 <motion.div
+                initial={{
+                  y:0,
+                }}
                   animate={{
                     filter:
                       hoveredIndex !== null && hoveredIndex !== index
@@ -82,7 +85,7 @@ const Testimonial = () => {
                     duration: 0.2,
                     ease: "easeInOut",
                   }}
-                  className="shadow-aceternity flex h-50 mb-6 w-full max-w-sm flex-col items-center gap-4 rounded-xl p-4"
+                  className="shadow-aceternity flex h-50 mb-6 w-full max-w-sm flex-col items-center gap-4 rounded-2xl p-4 hover:shadow-lg transition-shadow duration-200 ease-in"
                 >
                   <p className="text-secondary text-center italic">
                     {item.qoute}
