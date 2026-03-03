@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "motion/react";
 import Marquee from "react-fast-marquee";
 import Container from "./Container";
 const Testimonial = () => {
@@ -43,14 +42,19 @@ const Testimonial = () => {
   return (
     <div className="py-10">
       <Container>
-        {testimonials.map((item, index) => (
-          <div key={index} className="mb-8">
-            <div className="flex items-center gap-4 shadow-aceternity rounded-xl bg-red-500 w-full max-w-sm mx-auto">
-              <h1 className="text-primary">This is A dummy component!</h1>
-
+        <Marquee speed={150} className="my-4">
+          {testimonials.map((item, index) => (
+            <div key={index} className="mx-3  flex shrink-0 items-center justify-center">
+              <div className="shadow-aceternity flex w-full max-w-sm flex-col items-center gap-4 rounded-xl p-4 min-h-48">
+                <p className="text-center text-secondary italic">{item.qoute}</p>
+                <div className="flex flex-row items-center justify-between gap-16">
+                  <img src={item.avatar} alt={item.name} className="size-10 rounded-full" />
+                  <p>{item.name}</p>
+                </div>
             </div>
           </div>
-        ))}
+          ))}
+        </Marquee>
       </Container>
     </div>
   );
