@@ -78,10 +78,10 @@ const Testimonial = () => {
                     y:hoveredIndex === index ? -5 : 0,
                   }}
                   transition={{
-                    duration: 0.3,
+                    duration: 0.2,
                     ease: "easeInOut",
                   }}
-                  className="shadow-aceternity flex h-50 w-full max-w-sm flex-col items-center gap-4 rounded-xl p-4"
+                  className="shadow-aceternity flex h-50 mb-6 w-full max-w-sm flex-col items-center gap-4 rounded-xl p-4"
                 >
                   <p className="text-secondary text-center italic">
                     {item.qoute}
