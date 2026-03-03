@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "motion/react";
+import Marquee from "react-fast-marquee";
 import Container from "./Container";
 const Testimonial = () => {
   const testimonials = [
@@ -53,6 +54,10 @@ const Testimonial = () => {
                   className="mr-4 h-12 w-12 rounded-full"
                 />
                 <span className="font-semibold text-gray-800">{item.name}</span>
+                <Marquee>
+                  I can be a React component, multiple React components, or just
+                  some text.
+                </Marquee>
               </div>
             </div>
           </div>
