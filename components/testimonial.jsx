@@ -1,5 +1,7 @@
 "use client";
 import Marquee from "react-fast-marquee";
+import { motion } from "motion/react";
+import { useState } from "react";
 import Container from "./Container";
 const Testimonial = () => {
   const testimonials = [
@@ -39,22 +41,64 @@ const Testimonial = () => {
         "https://images.unsplash.com/photo-1595956553066-fe24a8c33395?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGZhY2V8ZW58MHx8MHx8fDA%3D",
     },
   ];
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <div className="py-10">
       <Container>
-        <Marquee speed={150} className="my-4">
-          {testimonials.map((item, index) => (
-            <div key={index} className="mx-3  flex shrink-0 items-center justify-center">
-              <div className="shadow-aceternity flex w-full max-w-sm flex-col items-center gap-4 rounded-xl p-4 min-h-48">
-                <p className="text-center text-secondary italic">{item.qoute}</p>
-                <div className="flex flex-row items-center justify-between gap-16">
-                  <img src={item.avatar} alt={item.name} className="size-10 rounded-full" />
-                  <p>{item.name}</p>
-                </div>
-            </div>
-          </div>
-          ))}
-        </Marquee>
+        <motion.div
+          initial={{
+            opacity: 0.5,
+            filter: "blur(10px)",
+            y: 5,
+          }}
+          whileInView={{
+            opacity: 1,
+            filter: "blur(0px)",
+            y: 0,
+          }}
+          transition={{
+            duration: 0.3,
+            ease: "easeInOut",
+          }}
+        >
+          <Marquee speed={150} className="my-4">
+            {testimonials.map((item, index) => (
+              <div
+                key={index}
+                className="mx-3 flex shrink-0 items-center justify-center"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+              >
+                <motion.div
+                  animate={{
+                    filter:
+                      hoveredIndex !== null && hoveredIndex !== index
+                        ? "blur(3px)"
+                        : "blur(0px)",
+                    y:hoveredIndex === index ? -5 : 0,
+                  }}
+                  transition={{
+                    duration: 0.3,
+                    ease: "easeInOut",
+                  }}
+                  className="shadow-aceternity flex min-h-48 w-full max-w-sm flex-col items-center gap-4 rounded-xl p-4"
+                >
+                  <p className="text-secondary text-center italic">
+                    {item.qoute}
+                  </p>
+                  <div className="flex flex-row items-center justify-between gap-16">
+                    <img
+                      src={item.avatar}
+                      alt={item.name}
+                      className="size-10 rounded-full"
+                    />
+                    <p>{item.name}</p>
+                  </div>
+                </motion.div>
+              </div>
+            ))}
+          </Marquee>
+        </motion.div>
       </Container>
     </div>
   );
