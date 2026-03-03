@@ -45,21 +45,7 @@ const Testimonial = () => {
       <Container>
         {testimonials.map((item, index) => (
           <div key={index} className="mb-8">
-            <div className="rounded-lg bg-white p-6 shadow-md">
-              <p className="mb-4 text-gray-700 italic">{item.qoute}</p>
-              <div className="flex items-center">
-                <img
-                  src={item.avatar}
-                  alt={item.name}
-                  className="mr-4 h-12 w-12 rounded-full"
-                />
-                <span className="font-semibold text-gray-800">{item.name}</span>
-                <Marquee>
-                  I can be a React component, multiple React components, or just
-                  some text.
-                </Marquee>
-              </div>
-            </div>
+            
           </div>
         ))}
       </Container>
