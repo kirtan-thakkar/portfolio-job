@@ -61,7 +61,7 @@ const Testimonial = () => {
             ease: "easeInOut",
           }}
         >
-          <Marquee speed={150} className="my-4">
+          <Marquee speed={100} className="my-4">
             {testimonials.map((item, index) => (
               <div
                 key={index}
@@ -81,7 +81,7 @@ const Testimonial = () => {
                     duration: 0.3,
                     ease: "easeInOut",
                   }}
-                  className="shadow-aceternity flex min-h-48 w-full max-w-sm flex-col items-center gap-4 rounded-xl p-4"
+                  className="shadow-aceternity flex h-50 w-full max-w-sm flex-col items-center gap-4 rounded-xl p-4"
                 >
                   <p className="text-secondary text-center italic">
                     {item.qoute}
