@@ -90,7 +90,7 @@ const Testimonial = () => {
                     <img
                       src={item.avatar}
                       alt={item.name}
-                      className="size-10 rounded-full opacity-90"
+                      className="size-10 rounded-full object-cover opacity-90"
                     />
                     <p className="text-primary">{item.name}</p>
                   </div>
