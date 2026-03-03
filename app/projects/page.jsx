@@ -4,11 +4,13 @@ import Footer from "@/components/Footer";
 import Container from "@/components/Container";
 import Project from "@/components/project";
 import Testimonial from "@/components/testimonial";
+import { Scales } from "@/components/scales";
 export default function ProjectPage() {
   return (
     <>
-      <div className="min-h-screen p-10 md:p-10 mb:pt-20 tracking-tight">
+      <div className="min-h-screen p-12 md:p-10 mb:pt-20 tracking-tight relative">
         <Container className=" p-4 md:p-10">
+          <Scales />
           <motion.h1
             initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)",delay:0.1 }}

@@ -2,12 +2,15 @@
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import Project from "@/components/project";
+import { Scales } from "@/components/scales";
 import { motion } from "motion/react";
 export default function Home() {
   return (
     <>
-      <div className="mb:pt-20 min-h-screen p-10 tracking-tight md:p-10">
+      <div className="mb:pt-20 min-h-screen p-10 tracking-tight md:p-10 relative">
+        
         <Container className="min-h-screen p-4 md:p-10">
+          <Scales />
           <motion.h1
             initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)",delay:0.1 }}

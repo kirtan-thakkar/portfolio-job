@@ -4,11 +4,13 @@ import { Collage } from "@/components/collage";
 import Container from "@/components/Container";
 import TimeLine from "@/components/Timeline";
 import Footer from "@/components/Footer";
+import { Scales } from "@/components/scales";
 export default function AboutPage() {
   return (
     <>
       <div className="mb:pt-20 min-h-[200vh] p-10 tracking-tight md:p-10">
         <Container className="min-h-screen p-4 md:p-10">
+          <Scales />
           <motion.h1
             initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)", delay: 0.2 }}
