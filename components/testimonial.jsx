@@ -45,7 +45,10 @@ const Testimonial = () => {
       <Container>
         {testimonials.map((item, index) => (
           <div key={index} className="mb-8">
-            
+            <div className="flex items-center gap-4 shadow-aceternity rounded-xl bg-red-500 w-full max-w-sm mx-auto">
+              <h1 className="text-primary">This is A dummy component!</h1>
+
+            </div>
           </div>
         ))}
       </Container>
