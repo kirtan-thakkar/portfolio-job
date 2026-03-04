@@ -56,7 +56,7 @@ const Project = () => {
                   ease: "easeInOut",
                   delay: index * 0.1,
                 }}
-                className="group flex flex-col gap-1 md:gap-2 mb-2"
+                className="group flex flex-col gap-1 md:gap-2 mb-2 border border-neutral-200 rounded-lg  "
                 key={index}
               >
                 <Link
