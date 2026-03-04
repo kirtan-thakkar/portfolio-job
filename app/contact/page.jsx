@@ -10,7 +10,7 @@ export default function AboutPage() {
   return (
     <>
       <ReactLenis root className="mb:pt-20 min-h-screen p-10 tracking-tight md:p-10 relative">
-        <Container className="min-h-screen p-4 md:p-10 ">
+        <Container className="min-h-screen p-4 md:p-10  md:pt-14">
           <Scales />
           <motion.h1
             initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
