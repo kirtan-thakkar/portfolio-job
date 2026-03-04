@@ -33,7 +33,7 @@ const Project = () => {
 
   return (
     <div className="py-10">
-      <Container className="border-y border-neutral-100 py-2">
+      <Container className="border-y border-neutral-100 py-2 shadow-[0_-4px_8px_-6px_rgb(229_229_229)]">
         <p className="text-secondary max-w-lg pt-4 text-sm md:text-base">
           Some of my Beautifully Crafted Projects
         </p>
