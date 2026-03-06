@@ -36,10 +36,12 @@ export default function AboutPage() {
             I love to travel.
           </p>
           <Collage />
-          <p className="text-secondary mt-6 max-w-lg pt-4 text-sm md:text-base">
+          <div className="shadow-section-inset">
+            <p className="text-secondary mt-6 max-w-lg pt-4 text-sm md:text-base">
             Here's a timeline of my jouney as a web developer.
           </p>
           <TimeLine />
+          </div>
           <Footer />
         </Container>
       </ReactLenis>

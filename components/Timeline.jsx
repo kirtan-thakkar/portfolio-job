@@ -31,7 +31,7 @@ export default function TimeLine() {
   ];
   return (
     <>
-      <div className="py-10">
+      <div className="py-10 ">
         {data.map((item, index) => {
           return (
             <div key={index} className="mb-4">
