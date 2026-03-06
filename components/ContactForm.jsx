@@ -28,7 +28,7 @@ const ContactForm = ({className}) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
   return (
-    <div className={`py-10 ${className}`}>
+    <div className={`py-10 ${className} shadow-section-inset`}>
       <form onSubmit={handleSubmit}>
         <div className="mx-auto flex w-full max-w-lg flex-col gap-2">
           <label
