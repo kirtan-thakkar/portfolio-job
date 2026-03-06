@@ -43,7 +43,7 @@ const Testimonial = () => {
   ];
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
-    <div className="py-10 shadow-section-inset">
+    <div className="py-10 ">
       <Container>
         <motion.div
         className="mask-l-from-80% mask-r-from-80%  "
