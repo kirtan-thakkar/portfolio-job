@@ -66,7 +66,7 @@ const Testimonial = () => {
             {testimonials.map((item, index) => (
               <div
                 key={index}
-                className="mx-3 flex flex-col shrink-0 items-center justify-center "
+                className="mx-3 flex flex-col shrink-0 items-center justify-center  "
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >
@@ -85,9 +85,9 @@ const Testimonial = () => {
                     duration: 0.2,
                     ease: "easeInOut",
                   }}
-                  className="shadow-aceternity flex h-50 mb-6 w-full max-w-sm flex-col items-center gap-4 rounded-2xl p-4 hover:shadow-lg transition-shadow duration-200 ease-in"
+                  className="shadow-aceternity flex h-50 mb-6 w-full max-w-xs flex-col items-center gap-4 rounded-2xl p-4 hover:shadow-lg transition-shadow duration-200 ease-in "
                 >
-                  <p className="text-secondary text-center italic">
+                  <p className="text-secondary text-center italic font-medium">
                     {item.qoute}
                   </p>
                   <div className="flex flex-row items-center py-4 justify-baseline gap-4">
@@ -96,7 +96,7 @@ const Testimonial = () => {
                       alt={item.name}
                       className="size-10 rounded-full object-cover opacity-90"
                     />
-                    <p className="text-primary">{item.name}</p>
+                    <p className="text-primary font-semibold">{item.name}</p>
                   </div>
                 </motion.div>
               </div>
