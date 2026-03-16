@@ -1,62 +1,97 @@
 "use client";
-import Image from "next/image";
+import { useEffect, useState } from "react";
 import Container from "./Container";
-import Link from "next/link";
-import { motion } from "motion/react";
+import { Gitmap } from "./ui/gitmap";
+
+const CONTRIBUTION_FROM = "2026-01-01";
+const CONTRIBUTION_TO = "2026-12-31";
+const FIXED_FROM_DATE = new Date(`${CONTRIBUTION_FROM}T00:00:00.000Z`);
+const FIXED_TO_DATE = new Date(`${CONTRIBUTION_TO}T23:59:59.999Z`);
+
+const colors = {
+  empty: "#ababab",
+  level1: "#0e4429",
+  level2: "#006d32",
+  level3: "#26a641",
+  level4: "#39d353",
+};
+
 const GitContribution = () => {
+  const [contributions, setContributions] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const fetchContributions = async () => {
+      try {
+        setIsLoading(true);
+        setError("");
+
+        const response = await fetch(
+          `/api/github/contributions?from=${CONTRIBUTION_FROM}&to=${CONTRIBUTION_TO}`,
+          {
+            cache: "no-store",
+          }
+        );
+
+        if (!response.ok) {
+          const fallbackError = "Unable to load GitHub contributions.";
+          const payload = await response.json().catch(() => ({}));
+          throw new Error(payload?.error || fallbackError);
+        }
+
+        const payload = await response.json();
+
+        if (!isMounted) {
+          return;
+        }
+
+        setContributions(payload?.contributions || []);
+      } catch (err) {
+        if (!isMounted) {
+          return;
+        }
+
+        setError(err instanceof Error ? err.message : "Unable to load GitHub contributions.");
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    fetchContributions();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
   return (
     <div className="py-8">
-      <Container className="border-y border-neutral-100 py-5 shadow-section-inset">
-        <p className="text-secondary max-w-lg pt-4 text-sm md:text-base">
-          Some of my Beautifully Crafted Projects
+      <Container className="shadow-section-inset border-y border-neutral-100 py-5">
+        <p
+          className={`max-w-lg pt-4 text-sm md:text-base ${
+            error ? "text-red-400" : "text-secondary"
+          }`}
+        >
+          {isLoading && "Loading GitHub contributions..."}
+          {!isLoading && !error && "GitHub contributions for 2026."}
+          {!isLoading && error && `GitHub sync issue: ${error}`}
         </p>
-        <div className="grid grid-cols-1 gap-2 py-6 md:grid-cols-3 md:gap-6">
-          {completedProject.slice(0,3).map((project, index) => {
-            return (
-              <motion.div
-                initial={{
-                  opacity: 0,
-                  filter: "blur(10px)",
-                  y: 10,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  filter: "blur(0px)",
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeInOut",
-                  delay: index * 0.1,
-                }}
-                className="group flex flex-col gap-1 md:gap-2 mb-2 border border-neutral-200 rounded-lg  "
-                key={index}
-              >
-                <Link
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mb-2"
-                >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={500}
-                    height={500}
-                    className="h-60 w-full rounded-lg object-cover transition-all duration-200 ease-in-out group-hover:blur-[5px]"
-                  ></Image>
-                </Link>
-                <div>
-                  <h1 className="text-primary text-sm md:text-base dark:text-neutral-200">
-                    {project.title}
-                  </h1>
-                  <p className="mt-2 text-secondary text-xs md:text-sm dark:text-neutral-200">
-                    {project.description}
-                  </p>
-                </div>
-              </motion.div>
-            );
-          })}
+
+        <div className="shadow-aceternity mx-auto mt-4 max-w-3xl p-4">
+          {!error && (
+            <Gitmap
+              contributions={contributions}
+              colors={colors}
+              from={FIXED_FROM_DATE}
+              to={FIXED_TO_DATE}
+              className="rounded-lg p-4 "
+            />
+          )}
         </div>
       </Container>
     </div>

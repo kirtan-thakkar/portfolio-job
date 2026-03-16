@@ -20,6 +20,23 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## GitHub Contribution Graph Setup
+
+The contribution heatmap now fetches data automatically from GitHub.
+
+Create a `.env.local` file in the project root and set:
+
+```bash
+GITHUB_USERNAME=your-github-username
+# Optional but recommended for accurate yearly data via GraphQL
+GITHUB_TOKEN=your-github-personal-access-token
+```
+
+Notes:
+
+- `GITHUB_TOKEN` is optional. If it is missing (or invalid), the app falls back to public push events.
+- Public push events are limited by GitHub API history/rate limits, so GraphQL + token gives better coverage.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

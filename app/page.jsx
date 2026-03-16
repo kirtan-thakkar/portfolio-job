@@ -6,6 +6,7 @@ import { Scales } from "@/components/scales";
 import { motion } from "motion/react";
 import {ReactLenis} from "lenis/react";
 import Testimonial from "@/components/testimonial";
+import GitContribution from "@/components/Git";
 export default function Home() {
   return (
     <>
@@ -33,6 +34,7 @@ export default function Home() {
             Gsap
           </motion.p>
           <Project />
+          <GitContribution />
           <Testimonial />
           <Footer />
         </Container>
