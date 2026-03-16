@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 import Container from "@/components/Container";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
 import { Scales } from "@/components/scales";

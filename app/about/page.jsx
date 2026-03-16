@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 import { Collage } from "@/components/collage";
 import Container from "@/components/Container";
 import TimeLine from "@/components/Timeline";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import { Scales } from "@/components/scales";
 import { ReactLenis } from "lenis/react";
 export default function AboutPage() {

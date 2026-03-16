@@ -1,6 +1,6 @@
 "use client";
 import Container from "@/components/Container";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 import Project from "@/components/project";
 import { Scales } from "@/components/scales";
 import { motion } from "motion/react";
