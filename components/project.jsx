@@ -29,6 +29,14 @@ const Project = () => {
       url: "https://portfolio-mu-beryl-12.vercel.app/",
       tech: ["Next.js", "React", "Tailwind CSS", "GSAP"],
     },
+    {
+      title: "Phishlytics",
+      image: "/phishlytics.png",
+      description:
+        "An AI-powered phishing simulation tool designed to help organizations identify vulnerabilities and train employees to recognize and respond to phishing attacks effectively.",
+      url: "https://phishlytics.vercel.app/",
+      tech: ["Next.js", "React", "Tailwind CSS", "GSAP","Python","Fastapi","Gemini API","langchain"],
+    },
   ];
 
   return (
@@ -38,7 +46,7 @@ const Project = () => {
           Some of my Beautifully Crafted Projects
         </p>
         <div className="grid grid-cols-1 gap-2 py-6 md:grid-cols-3 md:gap-6">
-          {completedProject.slice(0,3).map((project, index) => {
+          {completedProject.map((project, index) => {
             return (
               <motion.div
                 initial={{

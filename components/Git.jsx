@@ -71,7 +71,7 @@ const GitContribution = () => {
 
   return (
     <div className="py-8">
-      <Container className="shadow-section-inset border-y border-neutral-100 py-5">
+      <Container className=" py-5">
         <p
           className={`max-w-lg pt-4 text-sm md:text-base ${
             error ? "text-red-400" : "text-secondary"
@@ -82,7 +82,7 @@ const GitContribution = () => {
           {!isLoading && error && `GitHub sync issue: ${error}`}
         </p>
 
-        <div className="shadow-aceternity mx-auto mt-4 max-w-3xl p-4">
+        <div className="shadow-section-inset border-y border-neutral-100 mx-auto mt-4 max-w-3xl p-4">
           {!error && (
             <Gitmap
               contributions={contributions}
