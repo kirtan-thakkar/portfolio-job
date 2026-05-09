@@ -4,29 +4,39 @@ import { IconSquareRoundedCheckFilled } from "@tabler/icons-react";
 export default function TimeLine() {
   const data = [
     {
-      title: "2025",
+      title: "2026",
       description:
-        "Developed a task management app with authentication and cloud synchronization",
+        "Building production-focused frontend applications using Next.js, Tailwind CSS, GSAP, and modern UI/UX principles while actively improving responsiveness, animations, and product experience.",
+    },
+    {
+      title: "2026",
+      description:
+        "Developed real-world projects including a business website for a dental clinic, finance/product landing pages, and interactive frontend experiences focused on clean design and performance.",
     },
     {
       title: "2025",
       description:
-        "Created an e-commerce platform with Stripe payment integration and inventory management system",
+        "Reached Top 5 among 750+ teams at PDEU Hackathon by building a product-focused solution under limited time constraints.",
     },
     {
       title: "2025",
       description:
-        "Built a real-time chat application using Socket.io and deployed it on Vercel",
+        "Reached Top 100 among 2500+ registrations at DAIICT Hackathon while collaborating on problem-solving and rapid MVP development.",
     },
     {
       title: "2025",
       description:
-        "Started learning React and Nextjs and created my first full stack web app using Nextjs and MongoDB",
+        "Built full-stack web applications using Next.js, MongoDB, REST APIs, authentication systems, and real-time features while exploring scalable frontend architecture.",
+    },
+    {
+      title: "2025",
+      description:
+        "Started building interactive frontend experiences using GSAP, animations, and modern web design systems to improve frontend development skills beyond traditional CRUD applications.",
     },
     {
       title: "2024",
       description:
-        "Started learning programming and built my first website using HTML, CSS, and JavaScript",
+        "Started learning web development with HTML, CSS, and JavaScript and built first responsive websites while exploring UI design and frontend fundamentals.",
     },
   ];
   return (
