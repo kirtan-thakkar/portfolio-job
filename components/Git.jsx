@@ -82,15 +82,17 @@ const GitContribution = () => {
           {!isLoading && error && `GitHub sync issue: ${error}`}
         </p>
 
-        <div className="shadow-section-inset border-y border-neutral-100 mx-auto mt-4 max-w-3xl p-4">
+        <div className="shadow-section-inset border-y border-neutral-100 mx-auto mt-4 max-w-3xl p-4 overflow-x-auto">
           {!error && (
-            <Gitmap
-              contributions={contributions}
-              colors={colors}
-              from={FIXED_FROM_DATE}
-              to={FIXED_TO_DATE}
-              className="rounded-lg p-4 "
-            />
+            <div className="w-max mx-auto">
+              <Gitmap
+                contributions={contributions}
+                colors={colors}
+                from={FIXED_FROM_DATE}
+                to={FIXED_TO_DATE}
+                className="rounded-lg p-4"
+              />
+            </div>
           )}
         </div>
       </Container>
