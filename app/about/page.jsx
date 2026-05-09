@@ -9,8 +9,8 @@ import { ReactLenis } from "lenis/react";
 export default function AboutPage() {
   return (
     <>
-      <ReactLenis root className="mb:pt-26 min-h-screen p-10 tracking-tight md:p-10 relative">
-        <Container className="min-h-screen p-4 md:p-10 md:pt-14">
+      <ReactLenis root className="min-h-screen p-10 tracking-tight md:p-10 relative">
+        <Container className="min-h-screen p-4 pt-24 md:p-10 md:pt-20">
           <Scales />
           <motion.h1
             initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}

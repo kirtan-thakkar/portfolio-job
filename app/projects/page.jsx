@@ -11,9 +11,9 @@ export default function ProjectPage() {
     <>
       <ReactLenis
         root
-        className="mb:pt-20 mt-12 relative min-h-screen p-12 tracking-tight md:p-16"
+        className="mt-12 relative min-h-screen p-12 tracking-tight md:p-16"
       >
-        <Container className="p-4 md:p-12 md:pt-14">
+        <Container className="p-4 pt-24 md:p-12 md:pt-20">
           <Scales />
           <motion.h1
             initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}

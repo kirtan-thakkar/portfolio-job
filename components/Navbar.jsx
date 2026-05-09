@@ -7,7 +7,7 @@ import {
   useMotionValueEvent,
   useScroll,
 } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Navbar = () => {
   const navItems = [
@@ -28,6 +28,16 @@ const Navbar = () => {
   const [hovered, setHovered] = useState(null);
   const { scrollY } = useScroll();
   const [scroled, setScroled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     console.log("Page Scroll value : ", latest);
@@ -42,12 +52,12 @@ const Navbar = () => {
     <div>
       <Container>
         <motion.nav
-          className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-4xl items-center justify-between p-4 px-6 backdrop-blur-sm transition-shadow duration-100 ease-in-out"
+          className="fixed inset-x-0 top-0 z-10 mx-auto flex w-full max-w-4xl items-center justify-between p-4 px-4 md:px-6 backdrop-blur-sm transition-shadow duration-100 ease-in-out text-sm md:text-base"
           animate={{
             boxShadow: scroled ? "var(--shadow-aceternity)" : "none",
-            width: scroled ? "50%" : "100%",
-            borderRadius: scroled ? "30px" : "0px",
-            y: scroled ? 10 : 0,
+            width: scroled ? (isMobile ? "100%" : "50%") : "100%",
+            borderRadius: scroled ? (isMobile ? "0px" : "30px") : "0px",
+            y: scroled ? (isMobile ? 0 : 10) : 0,
           }}
           transition={{
             duration: 0.3,
@@ -56,7 +66,7 @@ const Navbar = () => {
         >
           <Link href="/">Logo</Link>
           <LayoutGroup>
-            <div className="relative flex items-center justify-center gap-10">
+            <div className="relative flex items-center justify-center gap-4 md:gap-10">
               {navItems.map((item, index) => (
                 <Link
                   className="relative px-1 py-1"
