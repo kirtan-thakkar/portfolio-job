@@ -6,6 +6,7 @@ import Project from "@/components/project";
 import Testimonial from "@/components/testimonial";
 import { Scales } from "@/components/scales";
 import { ReactLenis } from "lenis/react";
+import AnimatedText from "@/components/AnimatedText";
 export default function ProjectPage() {
   return (
     <>
@@ -15,25 +16,24 @@ export default function ProjectPage() {
       >
         <Container className="p-4 pt-24 md:p-12 md:pt-20">
           <Scales />
-          <motion.h1
-            initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)", delay: 0.1 }}
-            transition={{ duration: 0.1 }}
+          <AnimatedText
+            as="h1"
+            type="chars"
             className="text-primary text-2xl font-medium tracking-tighter md:text-4xl"
           >
             Projects
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 5, filter: "blur(10px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)", delay: 0.2 }}
-            transition={{ duration: 0.3 }}
+          </AnimatedText>
+          <AnimatedText
+            as="p"
+            type="lines"
+            delay={1.35}
             className="text-secondary max-w-lg pt-4 text-sm md:text-base"
           >
             I'm a passionate software engineer dediccated to crafting elegant
             solutions for complex problems. With expertise in full-stack
             development, I enjoy building user-centeric applications that make a
             difference.
-          </motion.p>
+          </AnimatedText>
           <Project />
           <Testimonial />
           <Footer />

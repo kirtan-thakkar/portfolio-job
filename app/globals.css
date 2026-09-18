@@ -155,3 +155,5 @@
   animation: none !important;
 }
 
+
+.letter, .word, .line { position:relative; display:inline-block; will-change:transform; }

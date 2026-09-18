@@ -3,6 +3,7 @@ import Image from "next/image";
 import Container from "./Container";
 import Link from "next/link";
 import { motion } from "motion/react";
+import AnimatedText from "./AnimatedText";
 const Project = () => {
   const completedProject = [
     {
@@ -42,9 +43,14 @@ const Project = () => {
   return (
     <div className="py-8">
       <Container className="border-y border-neutral-100 py-5 shadow-section-inset">
-        <p className="text-secondary max-w-lg pt-4 text-sm md:text-base">
+        <AnimatedText
+          as="p"
+          type="lines"
+          delay={1.35}
+          className="text-secondary max-w-lg pt-4 text-sm md:text-base"
+        >
           Some of my Beautifully Crafted Projects
-        </p>
+        </AnimatedText>
         <div className="grid grid-cols-1 gap-2 py-6 md:grid-cols-3 md:gap-6">
           {completedProject.map((project, index) => {
             return (
