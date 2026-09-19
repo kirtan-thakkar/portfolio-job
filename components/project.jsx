@@ -57,12 +57,11 @@ const Project = () => {
               <motion.div
                 initial={{
                   opacity: 0,
-                  filter: "blur(10px)",
+                  
                   y: 10,
                 }}
                 whileInView={{
                   opacity: 1,
-                  filter: "blur(0px)",
                   y: 0,
                 }}
                 transition={{
@@ -84,7 +83,7 @@ const Project = () => {
                     alt={project.title}
                     width={500}
                     height={500}
-                    className="h-60 w-full rounded-lg object-cover transition-all duration-200 ease-in-out group-hover:blur-[5px]"
+                    className="h-60 w-full rounded-lg object-cover transition-all duration-200 ease-in-out"
                   ></Image>
                 </Link>
                 <div>
