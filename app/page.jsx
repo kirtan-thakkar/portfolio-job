@@ -1,3 +1,4 @@
+// main hero page of website
 "use client";
 import Container from "@/components/Container";
 import Footer from "@/components/footer";
