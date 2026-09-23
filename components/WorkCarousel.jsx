@@ -1,3 +1,4 @@
+// Work Carousel
 "use client";
 
 import { useEffect, useRef } from "react";
@@ -71,7 +72,7 @@ export default function WorkCarousel() {
           <img src="${data.slideImg}" alt="${data.slideTitle}" class="w-full h-full object-cover" />
           <div class="absolute inset-0 bg-black/40"></div>
         </div>
-        <div class="slide-header absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-auto md:bottom-8 md:translate-y-0 w-[90%] md:w-[75%] text-center flex flex-col items-center gap-4 z-10 text-white">
+        <div class="slide-header absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 md:top-auto md:bottom-8 md:translate-y-0 w-[90%] md:w-[75%] text-center flex flex-col items-center gap-4 z-[...]
           <div class="slide-title">
             <h1 class="${dmSans.className} text-[2rem] md:text-[5rem] font-semibold tracking-[-0.1rem] uppercase leading-none">${data.slideTitle}</h1>
           </div>
