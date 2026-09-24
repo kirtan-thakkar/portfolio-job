@@ -4,6 +4,8 @@ import Container from "./Container";
 import Link from "next/link";
 import { motion } from "motion/react";
 import AnimatedText from "./AnimatedText";
+import TechBadges from "./TechBadges";
+
 const Project = () => {
   const completedProject = [
     {
@@ -55,44 +57,57 @@ const Project = () => {
           {completedProject.map((project, index) => {
             return (
               <motion.div
-                initial={{
-                  opacity: 0,
-                  
-                  y: 10,
+                initial="hidden"
+                whileInView="visible"
+                whileHover="hover"
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  visible: { 
+                    opacity: 1, 
+                    y: 0,
+                    transition: { duration: 0.3, ease: "easeInOut", delay: index * 0.1 }
+                  },
+                  hover: { 
+                    x: 4, 
+                    transition: { type: "spring", stiffness: 400, damping: 25 } 
+                  }
                 }}
-                whileInView={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: "easeInOut",
-                  delay: index * 0.1,
-                }}
-                className="group flex flex-col gap-1 md:gap-2 mb-2 border border-neutral-200 rounded-lg  "
+                className="group relative flex flex-col gap-1 md:gap-2 mb-2 rounded-xl p-3 -m-3 cursor-pointer"
                 key={index}
               >
-                <Link
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mb-2"
-                >
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={500}
-                    height={500}
-                    className="h-60 w-full rounded-lg object-cover transition-all duration-200 ease-in-out"
-                  ></Image>
-                </Link>
-                <div>
-                  <h1 className="text-primary text-sm md:text-base dark:text-neutral-200">
-                    {project.title}
-                  </h1>
-                  <p className="mt-2 text-secondary text-xs md:text-sm dark:text-neutral-200">
-                    {project.description}
-                  </p>
+                <motion.div 
+                  className="absolute inset-0 rounded-xl border border-neutral-200 dark:border-neutral-800 pointer-events-none bg-neutral-50/50 dark:bg-neutral-900/20"
+                  variants={{
+                    hidden: { opacity: 0, scale: 0.96 },
+                    visible: { opacity: 0, scale: 0.96 },
+                    hover: { opacity: 1, scale: 1, transition: { duration: 0.2, ease: "easeOut" } }
+                  }}
+                />
+                
+                <div className="relative z-10">
+                  <Link
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mb-2 block"
+                  >
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={500}
+                      height={500}
+                      className="h-60 w-full rounded-lg object-cover transition-all duration-300 ease-in-out group-hover:shadow-md"
+                    ></Image>
+                  </Link>
+                  <div>
+                    <h1 className="text-primary text-sm md:text-base dark:text-neutral-200">
+                      {project.title}
+                    </h1>
+                    <p className="mt-2 text-secondary text-xs md:text-sm dark:text-neutral-200 line-clamp-3">
+                      {project.description}
+                    </p>
+                    <TechBadges techList={project.tech} />
+                  </div>
                 </div>
               </motion.div>
             );
