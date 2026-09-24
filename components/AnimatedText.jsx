@@ -1,3 +1,4 @@
+// added split text animation using gsap
 "use client";
 
 import { useRef } from "react";
