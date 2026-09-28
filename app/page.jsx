@@ -10,6 +10,10 @@ import Testimonial from "@/components/testimonial";
 import GitContribution from "@/components/Git";
 import AnimatedText from "@/components/AnimatedText";
 
+function Year(){
+  const currYear = new Date().getFullYear();
+  return currYear - 2024;
+}
 export default function Home() {
   return (
     <>
@@ -22,7 +26,7 @@ export default function Home() {
             type="chars"
             className="text-primary text-2xl font-medium tracking-tighter md:text-4xl"
           >
-            Hello
+            Kirtan Thakkar
           </AnimatedText>
           <AnimatedText 
             as="p"
@@ -30,7 +34,7 @@ export default function Home() {
             delay={1.35}
             className="text-secondary max-w-lg pt-4 text-sm md:text-base"
           >
-            I am a third year comp-sci student. I am a hardworking and
+            I am a {Year()} comp-sci student. I am a hardworking and
             dedicated individual with a passion of problem solving. I create bug
             less web apps that helps bussiness to gain digital presence with
             credibility. I craft web apps with Nextjs mongodb framer motion, and
