@@ -11,6 +11,7 @@ import GitContribution from "@/components/Git";
 import AnimatedText from "@/components/AnimatedText";
 
 import { PageHeading } from "@/components/ui/PageHeading";
+import AnimatedRole from "@/components/AnimatedRole";
 
 function Year(){
   const currYear = new Date().getFullYear();
@@ -23,7 +24,10 @@ export default function Home() {
         
         <Container className="min-h-screen p-4 pt-24 md:p-10 md:pt-20">
           <Scales />
-          <PageHeading>Kirtan Thakkar</PageHeading>
+          <div className="flex flex-wrap items-center gap-4">
+            <PageHeading>Kirtan Thakkar</PageHeading>
+            <AnimatedRole />
+          </div>
           <AnimatedText 
             as="p"
             type="lines"
