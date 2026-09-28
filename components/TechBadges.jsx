@@ -14,13 +14,13 @@ import {
 
 const getTechIcon = (tech) => {
   const t = tech.toLowerCase();
-  if (t.includes("next")) return <IconBrandNextjs className="w-3.5 h-3.5 text-neutral-500 dark:text-neutral-400" />;
-  if (t.includes("react")) return <IconBrandReact className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500" />;
+  if (t.includes("next")) return <IconBrandNextjs className="w-3.5 h-3.5 text-black dark:text-white" />;
+  if (t.includes("react")) return <IconBrandReact className="w-3.5 h-3.5 text-blue-500" />;
   if (t.includes("tailwind")) return <IconBrandTailwind className="w-3.5 h-3.5 text-cyan-500" />;
-  if (t.includes("python")) return <IconBrandPython className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500" />;
-  if (t.includes("api") || t.includes("fastapi") || t.includes("langchain")) return <IconApi className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500" />;
-  if (t.includes("gsap") || t.includes("framer")) return <IconBrandJavascript className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500" />;
-  return <IconCode className="w-3.5 h-3.5 text-neutral-400 dark:text-neutral-500" />;
+  if (t.includes("python")) return <IconBrandPython className="w-3.5 h-3.5 text-yellow-500" />;
+  if (t.includes("api") || t.includes("fastapi") || t.includes("langchain")) return <IconApi className="w-3.5 h-3.5 text-green-500" />;
+  if (t.includes("gsap") || t.includes("framer")) return <IconBrandJavascript className="w-3.5 h-3.5 text-yellow-400" />;
+  return <IconCode className="w-3.5 h-3.5 text-neutral-500" />;
 };
 
 export default function TechBadges({ techList }) {
