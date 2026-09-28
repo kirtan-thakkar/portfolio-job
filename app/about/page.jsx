@@ -7,19 +7,15 @@ import Footer from "@/components/footer";
 import { Scales } from "@/components/scales";
 import { ReactLenis } from "lenis/react";
 import AnimatedText from "@/components/AnimatedText";
+import { PageHeading } from "@/components/ui/PageHeading";
+
 export default function AboutPage() {
   return (
     <>
       <ReactLenis root className="min-h-screen p-10 tracking-tight md:p-10 relative">
         <Container className="min-h-screen p-4 pt-24 md:p-10 md:pt-20">
           <Scales />
-          <AnimatedText
-            as="h1"
-            type="chars"
-            className="text-primary text-2xl font-medium tracking-tighter md:text-4xl"
-          >
-            About Me
-          </AnimatedText>
+          <PageHeading>About Me</PageHeading>
           <AnimatedText
             as="p"
             type="lines"
@@ -38,7 +34,7 @@ export default function AboutPage() {
           <Collage />
           <div className="shadow-section-inset">
             <p className="text-secondary mt-6 max-w-lg pt-4 text-sm md:text-base">
-            Here's a timeline of my jouney as a web developer.
+            Here&apos;s a timeline of my jouney as a web developer.
           </p>
           <TimeLine />
           </div>

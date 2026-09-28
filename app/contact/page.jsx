@@ -7,19 +7,15 @@ import ContactForm from "@/components/ContactForm";
 import { Scales } from "@/components/scales";
 import { ReactLenis } from "lenis/react";
 import AnimatedText from "@/components/AnimatedText";
+import { PageHeading } from "@/components/ui/PageHeading";
+
 export default function AboutPage() {
   return (
     <>
       <ReactLenis root className="min-h-screen p-10 tracking-tight md:p-10 relative">
         <Container className="min-h-screen p-4 pt-24 md:p-10 md:pt-20">
           <Scales />
-          <AnimatedText
-            as="h1"
-            type="chars"
-            className="text-primary text-2xl font-medium tracking-tighter text-shadow-2xs  md:text-4xl"
-          >
-            Contact Me
-          </AnimatedText>
+          <PageHeading>Contact Me</PageHeading>
           <AnimatedText
             as="p"
             type="lines"

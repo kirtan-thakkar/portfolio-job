@@ -10,6 +10,8 @@ import Testimonial from "@/components/testimonial";
 import GitContribution from "@/components/Git";
 import AnimatedText from "@/components/AnimatedText";
 
+import { PageHeading } from "@/components/ui/PageHeading";
+
 function Year(){
   const currYear = new Date().getFullYear();
   return currYear - 2024;
@@ -21,13 +23,7 @@ export default function Home() {
         
         <Container className="min-h-screen p-4 pt-24 md:p-10 md:pt-20">
           <Scales />
-          <AnimatedText
-            as="h1"
-            type="chars"
-            className="text-primary text-2xl font-medium tracking-tighter md:text-4xl"
-          >
-            Kirtan Thakkar
-          </AnimatedText>
+          <PageHeading>Kirtan Thakkar</PageHeading>
           <AnimatedText 
             as="p"
             type="lines"
