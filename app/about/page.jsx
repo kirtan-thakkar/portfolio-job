@@ -1,5 +1,4 @@
 "use client";
-import { motion } from "motion/react";
 import { Collage } from "@/components/collage";
 import Container from "@/components/Container";
 import TimeLine from "@/components/Timeline";

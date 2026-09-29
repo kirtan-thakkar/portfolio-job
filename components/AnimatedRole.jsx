@@ -1,41 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "motion/react";
+import { MorphingText } from "@/components/ui/morphing-text";
 
 const roles = [
   "Software Engineer",
   "Frontend Developer",
   "Full Stack Developer",
+  "Freelancer"
 ];
 
 export default function AnimatedRole() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIndex((prev) => (prev + 1) % roles.length);
-    }, 3000);
-    return () => clearInterval(timer);
-  }, []);
-
   return (
-    <motion.div
-      layout
-      className="inline-flex items-center justify-center px-3 py-1 rounded-full border border-neutral-200 bg-white dark:bg-neutral-900 dark:border-neutral-800 shadow-sm overflow-hidden"
-    >
-      <AnimatePresence mode="popLayout">
-        <motion.span
-          key={roles[index]}
-          initial={{ opacity: 0, filter: "blur(10px)" }}
-          animate={{ opacity: 1, filter: "blur(0px)" }}
-          exit={{ opacity: 0, filter: "blur(10px)" }}
-          transition={{ duration: 0.3, ease: "easeInOut" }}
-          className="text-sm font-medium text-neutral-600 dark:text-neutral-300"
-        >
-          {roles[index]}
-        </motion.span>
-      </AnimatePresence>
-    </motion.div>
+    <div className="inline-flex items-center justify-center px-4 py-1.5 md:px-5 md:py-2 rounded-xl border-[1.5px] border-neutral-200/80 bg-white/50 dark:bg-neutral-900/50 dark:border-neutral-800 overflow-hidden">
+      <MorphingText 
+        texts={roles} 
+        className="text-lg md:text-xl font-normal text-neutral-500 h-6 md:h-7 w-[160px] md:w-[200px]" 
+      />
+    </div>
   );
 }

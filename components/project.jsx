@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 import AnimatedText from "./AnimatedText";
 import TechBadges from "./TechBadges";
 
-const Project = () => {
+const Project = ({ limit }) => {
   const completedProject = [
     {
       title: "Darsh Dental Clinic",
@@ -42,6 +42,8 @@ const Project = () => {
     },
   ];
 
+  const displayedProjects = limit ? completedProject.slice(0, limit) : completedProject;
+
   return (
     <div className="py-8">
       <Container className="border-y border-neutral-100 py-5 shadow-section-inset">
@@ -54,7 +56,7 @@ const Project = () => {
           Some of my Beautifully Crafted Projects
         </AnimatedText>
         <div className="grid grid-cols-1 gap-2 py-6 md:grid-cols-3 md:gap-6">
-          {completedProject.map((project, index) => {
+          {displayedProjects.map((project, index) => {
             return (
               <motion.div
                 initial="hidden"

@@ -12,6 +12,7 @@ import AnimatedText from "@/components/AnimatedText";
 
 import { PageHeading } from "@/components/ui/PageHeading";
 import AnimatedRole from "@/components/AnimatedRole";
+import WorkExperience from "@/components/WorkExperience";
 
 function Year(){
   const currYear = new Date().getFullYear();
@@ -40,7 +41,8 @@ export default function Home() {
             credibility. I craft web apps with Nextjs mongodb framer motion, and
             Gsap
           </AnimatedText>
-          <Project />
+          <Project limit={3} />
+          <WorkExperience />
           <GitContribution />
           <Testimonial />
           <Footer />
