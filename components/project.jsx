@@ -98,6 +98,7 @@ const Project = ({ limit }) => {
                       alt={project.title}
                       width={500}
                       height={500}
+                      sizes="(max-width: 768px) 100vw, 33vw"
                       className="h-60 w-full rounded-lg object-cover transition-all duration-300 ease-in-out group-hover:shadow-md"
                     ></Image>
                   </Link>

@@ -2,34 +2,42 @@
 
 import { useState } from "react";
 import { motion } from "motion/react";
-import {
-  IconBrandNextjs,
-  IconBrandReact,
-  IconBrandTailwind,
-  IconBrandPython,
-  IconApi,
-  IconBrandJavascript,
-  IconCode
-} from "@tabler/icons-react";
-
 const getTechIcon = (tech) => {
   const t = tech.toLowerCase();
-  if (t.includes("next")) return <IconBrandNextjs className="w-3.5 h-3.5 text-black dark:text-white" />;
-  if (t.includes("react")) return <IconBrandReact className="w-3.5 h-3.5 text-blue-500" />;
-  if (t.includes("tailwind")) return <IconBrandTailwind className="w-3.5 h-3.5 text-cyan-500" />;
-  if (t.includes("python")) return <IconBrandPython className="w-3.5 h-3.5 text-yellow-500" />;
-  if (t.includes("api") || t.includes("fastapi") || t.includes("langchain")) return <IconApi className="w-3.5 h-3.5 text-green-500" />;
-  if (t.includes("gsap") || t.includes("framer")) return <IconBrandJavascript className="w-3.5 h-3.5 text-yellow-400" />;
-  return <IconCode className="w-3.5 h-3.5 text-neutral-500" />;
+  
+  let slug = "";
+  if (t.includes("node")) slug = "nodedotjs";
+  else if (t.includes("postgres")) slug = "postgresql";
+  else if (t.includes("prisma")) slug = "prisma";
+  else if (t.includes("next")) slug = "nextdotjs"; 
+  else if (t.includes("react")) slug = "react";
+  else if (t.includes("tailwind")) slug = "tailwindcss";
+  else if (t.includes("gsap") || t.includes("greensock")) slug = "greensock";
+  else if (t.includes("python")) slug = "python";
+  else if (t.includes("api") || t.includes("fastapi")) slug = "fastapi";
+  else if (t.includes("langchain")) slug = "langchain";
+  else if (t.includes("framer")) slug = "framer";
+  else slug = "code"; 
+
+  // For nextjs, the default is black which hides in dark mode. 
+  // We can use css to invert only when the slug is nextdotjs, but standard CSS filters work fine.
+  // Using a generic approach: simpleicons natively are recognizable. 
+  
+  return (
+    <img 
+      src={`https://cdn.simpleicons.org/${slug}`} 
+      alt={tech} 
+      className={`w-3.5 h-3.5 ${slug === 'nextdotjs' ? 'dark:invert' : ''}`}
+    />
+  );
 };
 
 export default function TechBadges({ techList }) {
   const [hoveredIndex, setHoveredIndex] = useState(null);
-  const displayTechs = techList.slice(0, 3); // Show max 3 like the design
 
   return (
     <div className="flex items-center w-fit mt-3">
-      {displayTechs.map((tech, i) => {
+      {techList.map((tech, i) => {
         const isHovered = hoveredIndex === i;
         
         return (

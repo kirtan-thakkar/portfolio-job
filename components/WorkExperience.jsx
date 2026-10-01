@@ -21,14 +21,6 @@ const experiences = [
     description: "Completely revamped their online presence by designing and developing a fast, modern frontend interface tailored to their business requirements.",
     tech: ["Next.js", "React", "Tailwind CSS"],
     logo: "/heicon.png"
-  },
-  {
-    company: "Darsh Dental Clinic",
-    role: "Freelance Web Developer",
-    date: "October 2025",
-    description: "Developed a modern healthcare platform featuring an elegant UI, appointment management, and comprehensive service showcase.",
-    tech: ["Next.js", "React", "Tailwind CSS", "GSAP"],
-    logo: "/darsh.png"
   }
 ];
 
@@ -38,7 +30,7 @@ export default function WorkExperience() {
       <Container className="py-8 border-none shadow-none">
         <div className="mb-10 inline-block bg-neutral-100 dark:bg-neutral-800/50 px-3 py-1 rounded-sm">
           <p className="text-sm md:text-base font-normal text-neutral-600 dark:text-neutral-300">
-            Worked at reputed firms
+            Work Experience
           </p>
         </div>
 
@@ -72,6 +64,7 @@ export default function WorkExperience() {
                       src={exp.logo} 
                       alt={`${exp.company} logo`} 
                       fill
+                      sizes="(max-width: 768px) 64px, 112px"
                       className="object-contain object-right-top"
                     />
                   </div>

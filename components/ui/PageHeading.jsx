@@ -9,7 +9,7 @@ export function PageHeading({ children, className, ...props }) {
       as="h1"
       type="chars"
       className={cn(
-        "text-primary text-2xl font-semibold tracking-tighter md:text-4xl text-shadow-lg",
+        "text-primary text-3xl font-bold tracking-tight md:text-5xl",
         className
       )}
       {...props}
