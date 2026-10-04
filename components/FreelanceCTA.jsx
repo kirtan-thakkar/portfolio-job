@@ -1,71 +1,38 @@
 "use client";
-import { motion } from "motion/react";
 import Container from "./Container";
-import Link from "next/link";
-import { PageHeading } from "@/components/ui/PageHeading";
 
 export default function FreelanceCTA() {
   return (
     <div className="py-12 md:py-20">
-      <Container className="border-y border-neutral-100 dark:border-neutral-800 py-16 shadow-section-inset relative overflow-hidden">
-        {/* Subtle background glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-lg h-[200px] bg-green-500/5 dark:bg-green-500/10 blur-[100px] rounded-full pointer-events-none" />
+      <Container className="border-y border-neutral-100 dark:border-neutral-800 py-16 shadow-section-inset">
         
-        <div className="relative z-10 flex flex-col items-center justify-center text-center max-w-2xl mx-auto px-4">
-          
-          {/* Availability Badge */}
-          <motion.div 
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white/50 dark:bg-neutral-900/50 mb-6"
-          >
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>
-            </span>
-            <span className="text-xs md:text-sm font-medium text-neutral-600 dark:text-neutral-300">
-              Available for freelance projects
-            </span>
-          </motion.div>
+        <div className="max-w-2xl flex flex-col py-2">
+            <h2 className="text-xl md:text-2xl font-semibold text-primary dark:text-neutral-100 tracking-tight mb-4">
+              Get in touch
+            </h2>
+            
+            <p className="text-secondary dark:text-neutral-400 text-sm md:text-base leading-relaxed mb-8 max-w-lg">
+              I&apos;m currently looking for new opportunities. Whether you have a question or want to say hi, hit that button.
+            </p>
 
-          <PageHeading className="mb-4">
-            Let&apos;s build something great.
-          </PageHeading>
-          
-          <p className="text-secondary text-sm md:text-base mb-8 max-w-md">
-            Whether you need a high-performance web app, scalable backend architecture, or a complete digital overhaul—I&apos;m here to help turn your vision into reality.
-          </p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-          >
-            <Link
-              href="mailto:hello@example.com"
-              className="group inline-flex items-center gap-3 px-6 py-3 rounded-xl bg-primary text-primary-foreground font-medium text-sm md:text-base hover:opacity-90 transition-all shadow-md hover:shadow-lg"
+            <form 
+              onSubmit={(e) => e.preventDefault()}
+              className="flex items-center w-full max-w-md bg-neutral-100 dark:bg-[#1c1c1c] p-1.5 rounded-xl border border-neutral-200 dark:border-neutral-800/50 shadow-sm"
             >
-              Get in Touch
-              <svg 
-                xmlns="http://www.w3.org/2000/svg" 
-                width="16" 
-                height="16" 
-                viewBox="0 0 24 24" 
-                fill="none" 
-                stroke="currentColor" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-                className="transition-transform duration-300 group-hover:translate-x-1"
+              <input 
+                type="email" 
+                placeholder="Your email" 
+                required
+                className="flex-1 bg-transparent border-none outline-none px-4 text-sm md:text-base text-primary dark:text-neutral-200 placeholder-neutral-400 dark:placeholder-neutral-500"
+              />
+              <button 
+                type="submit"
+                className="shrink-0 px-4 py-2 bg-white dark:bg-[#2a2a2a] hover:bg-neutral-50 dark:hover:bg-[#333333] border border-neutral-200 dark:border-neutral-700/50 text-primary dark:text-neutral-200 text-sm md:text-base font-medium rounded-lg transition-colors shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]"
               >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-            </Link>
-          </motion.div>
-        </div>
+                Send Enquiry
+              </button>
+            </form>
+          </div>
       </Container>
     </div>
   );

@@ -1,9 +1,9 @@
 "use client";
-import { motion } from "motion/react";
+
 import Footer from "@/components/footer";
 import Container from "@/components/Container";
 import Project from "@/components/project";
-import Testimonial from "@/components/testimonial";
+import FreelanceCTA from "@/components/FreelanceCTA";
 import { Scales } from "@/components/scales";
 import { ReactLenis } from "lenis/react";
 import AnimatedText from "@/components/AnimatedText";
@@ -31,7 +31,7 @@ export default function ProjectPage() {
             difference.
           </AnimatedText>
           <Project />
-          <Testimonial />
+          <FreelanceCTA />
           <Footer />
         </Container>
       </ReactLenis>

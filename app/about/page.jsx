@@ -1,5 +1,5 @@
 "use client";
-import { Collage } from "@/components/collage";
+import TechStack from "@/components/TechStack";
 import Container from "@/components/Container";
 import TimeLine from "@/components/Timeline";
 import Footer from "@/components/footer";
@@ -27,10 +27,7 @@ export default function AboutPage() {
             credibility. I craft web apps with Nextjs mongodb framer motion, and
             Gsap
           </AnimatedText>
-          <p className="text-secondary mt-6 max-w-lg pt-4 text-sm md:text-base">
-            I love to travel.
-          </p>
-          <Collage />
+          <TechStack />
           <div className="shadow-section-inset">
             <p className="text-secondary mt-6 max-w-lg pt-4 text-sm md:text-base">
             Here&apos;s a timeline of my jouney as a web developer.
