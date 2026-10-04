@@ -120,10 +120,10 @@ const Project = ({ limit }) => {
                     />
                   </motion.div>
                   <motion.div layoutId={`project-details-${project.title}`} className="flex flex-col flex-1">
-                    <h1 className="text-primary text-base md:text-lg font-bold tracking-tighter text-shadow-sm">
+                    <h1 className="text-primary text-sm md:text-base font-medium dark:text-neutral-200">
                       {project.title}
                     </h1>
-                    <p className="mt-2 mb-3 text-secondary text-xs md:text-sm line-clamp-2">
+                    <p className="mt-2 mb-3 text-secondary text-xs md:text-sm font-light dark:text-neutral-300 line-clamp-3">
                       {project.description}
                     </p>
                     <div className="mt-auto">

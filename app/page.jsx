@@ -6,7 +6,7 @@ import Project from "@/components/project";
 import { Scales } from "@/components/scales";
 import { motion } from "motion/react";
 import {ReactLenis} from "lenis/react";
-import CodePhilosophy from "@/components/CodePhilosophy";
+import FreelanceCTA from "@/components/FreelanceCTA";
 import GitContribution from "@/components/Git";
 import AnimatedText from "@/components/AnimatedText";
 
@@ -44,7 +44,7 @@ export default function Home() {
           <Project limit={3} />
           <WorkExperience />
           <GitContribution />
-          <CodePhilosophy />
+          <FreelanceCTA />
           <Footer />
         </Container>
       </ReactLenis>
