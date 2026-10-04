@@ -35,7 +35,7 @@ export default function TechStack() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, delay: i * 0.05, type: "spring", stiffness: 200 }}
-            className="flex items-center gap-3 px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#151515] shadow-sm hover:shadow-md hover:border-neutral-300 dark:hover:border-neutral-700 transition-all cursor-default group"
+            className="flex items-center gap-3 px-4 py-2 md:px-5 md:py-2.5 rounded-full border border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 shadow-sm hover:shadow-md hover:border-neutral-300 dark:hover:border-neutral-700 transition-all cursor-default group"
           >
             <div className="w-5 h-5 md:w-6 md:h-6 shrink-0 transition-transform duration-300 group-hover:scale-110">
               <img
@@ -46,7 +46,7 @@ export default function TechStack() {
                 }`}
               />
             </div>
-            <span className="text-sm md:text-base font-medium text-neutral-700 dark:text-neutral-300 group-hover:text-primary dark:group-hover:text-white transition-colors tracking-tight">
+            <span className="text-xs md:text-sm text-secondary font-light transition-colors tracking-tight">
               {tech.name}
             </span>
           </motion.div>

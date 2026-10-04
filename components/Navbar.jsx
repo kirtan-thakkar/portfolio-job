@@ -81,7 +81,6 @@ const Navbar = () => {
                 >
                   {hovered === index && (
                     <motion.span
-                      // LayoutID animation isn't working when the element is conditionally rendered!
                       layoutId="hovered-span"
                       className="absolute inset-0 h-full w-full rounded-md bg-neutral-100 dark:bg-neutral-800"
                     />

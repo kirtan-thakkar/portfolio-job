@@ -7,7 +7,7 @@ export default function FreelanceCTA() {
       <Container className="border-y border-neutral-100 dark:border-neutral-800 py-16 shadow-section-inset">
         
         <div className="max-w-2xl flex flex-col py-2">
-            <h2 className="text-xl md:text-2xl font-semibold text-primary dark:text-neutral-100 tracking-tight mb-4">
+            <h2 className="text-xl md:text-2xl font-medium text-primary dark:text-neutral-100 tracking-tight mb-4">
               Get in touch
             </h2>
             
@@ -17,7 +17,7 @@ export default function FreelanceCTA() {
 
             <form 
               onSubmit={(e) => e.preventDefault()}
-              className="flex items-center w-full max-w-md bg-neutral-100 dark:bg-[#1c1c1c] p-1.5 rounded-xl border border-neutral-200 dark:border-neutral-800/50 shadow-sm"
+              className="flex items-center w-full max-w-md bg-neutral-100 dark:bg-neutral-900 p-1.5 rounded-xl border border-neutral-200 dark:border-neutral-800/50 shadow-sm"
             >
               <input 
                 type="email" 
@@ -27,7 +27,7 @@ export default function FreelanceCTA() {
               />
               <button 
                 type="submit"
-                className="shrink-0 px-4 py-2 bg-white dark:bg-[#2a2a2a] hover:bg-neutral-50 dark:hover:bg-[#333333] border border-neutral-200 dark:border-neutral-700/50 text-primary dark:text-neutral-200 text-sm md:text-base font-medium rounded-lg transition-colors shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]"
+                className="shrink-0 px-4 py-2 bg-white dark:bg-neutral-800 hover:bg-neutral-50 dark:hover:bg-neutral-700 border border-neutral-200 dark:border-neutral-700/50 text-primary dark:text-neutral-200 text-sm md:text-base font-medium rounded-lg transition-colors shadow-sm dark:shadow-[inset_0_1px_0_0_rgba(255,255,255,0.05)]"
               >
                 Send Enquiry
               </button>
