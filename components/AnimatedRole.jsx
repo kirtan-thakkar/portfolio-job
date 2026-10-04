@@ -22,7 +22,7 @@ export default function AnimatedRole() {
   return (
     <motion.div 
       layout
-      className="inline-flex items-center justify-center px-4 py-1.5 md:px-5 md:py-2 rounded-[1rem] border border-neutral-200/60 dark:border-neutral-800/60 bg-transparent overflow-hidden"
+      className="inline-flex items-center justify-center px-4 py-1.5 md:px-5 md:py-2 rounded-[1rem] border-[1.5px] border-neutral-200/80 bg-white/50 dark:bg-neutral-900/50 dark:border-neutral-800 overflow-hidden"
     >
       <AnimatePresence mode="popLayout" initial={false}>
         <motion.div

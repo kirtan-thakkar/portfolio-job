@@ -6,7 +6,6 @@ import { Toaster } from "sonner";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
-  weights: ["400"],
 });
 
 export const metadata = {

@@ -45,10 +45,10 @@ export default function WorkExperience() {
               className="flex flex-row justify-between items-start gap-4 pb-8"
             >
               <div className="flex-1 max-w-2xl">
-                <h3 className="text-base md:text-lg font-medium text-neutral-900 dark:text-neutral-100 mb-1">
+                <h3 className="text-base md:text-lg font-normal text-neutral-900 dark:text-neutral-100 mb-1">
                   {exp.company}
                 </h3>
-                <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 mb-3">
+                <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 mb-3 font-light">
                   {exp.role} <span className="text-neutral-400 dark:text-neutral-500 ml-2">{exp.date}</span>
                 </p>
                 <p className="text-sm md:text-base text-neutral-500 dark:text-neutral-400 mb-5 leading-relaxed">
