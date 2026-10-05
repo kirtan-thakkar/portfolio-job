@@ -1,30 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Kirtan Thakkar — Portfolio Website
+
+This repository contains my personal portfolio website, built with [Next.js](https://nextjs.org). It showcases my skills, projects, experience, and background as a developer.
+
+The website also includes a GitHub contribution graph that displays my recent activity and development journey.
+
+## Features
+
+- Personal introduction and developer profile
+- Skills and technologies overview
+- Selected projects and work
+- GitHub contribution graph
+- Responsive design for desktop and mobile devices
+- Fast and modern Next.js application
 
 ## Getting Started
 
-First, run the development server:
+Clone the repository and install the dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
 
 ## GitHub Contribution Graph Setup
 
-The contribution heatmap now fetches data automatically from GitHub.
-
-Create a `.env.local` file in the project root and set:
+To display GitHub contribution data, create a `.env.local` file in the project root:
 
 ```bash
 GITHUB_USERNAME=your-github-username
@@ -32,22 +39,22 @@ GITHUB_USERNAME=your-github-username
 GITHUB_TOKEN=your-github-personal-access-token
 ```
 
-Notes:
+`GITHUB_TOKEN` is optional. If it is missing or invalid, the application falls back to public GitHub push events. Using a token provides better coverage and more accurate contribution data.
 
-- `GITHUB_TOKEN` is optional. If it is missing (or invalid), the app falls back to public push events.
-- Public push events are limited by GitHub API history/rate limits, so GraphQL + token gives better coverage.
+## Built With
 
-## Learn More
+- [Next.js](https://nextjs.org)
+- React
+- JavaScript
+- GitHub API
+- Vercel
 
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This portfolio can be deployed easily using [Vercel](https://vercel.com), the platform created by the team behind Next.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Author
 
-## Deploy on Vercel
+**Kirtan Thakkar**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This portfolio website was created to share my work, skills, and experience with potential collaborators and employers.
