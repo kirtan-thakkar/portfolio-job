@@ -51,13 +51,13 @@ export default function WorkCarousel() {
     if (!sliderRef.current) return;
     gsap.registerPlugin(SplitText);
 
-    let currentSlide = 1;
-    let isAnimating = false;
-    let scrollAllowed = true;
-    let lastScrollTime = 0;
-    const totalSlides = slidesData.length;
-    let touchStartY = 0;
-    let isTouchActive = false;
+    // let currentSlide = 1;
+    // let isAnimating = false;
+    // let scrollAllowed = true;
+    // let lastScrollTime = 0;
+    // const totalSlides = slidesData.length;
+    // let touchStartY = 0;
+    // let isTouchActive = false;
 
     const pendingTimers = new Set();
     const splitInstances = new WeakMap();
